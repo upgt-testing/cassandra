@@ -1,0 +1,328 @@
+# Cassandra Cluster Test Transformation Tracker
+
+This file tracks the progress of transforming tests to add restart positions.
+
+Legend:
+- [ ] Not started
+- [x] Finished
+
+## Progress: 0/267 (0%)
+
+---
+
+## Guardrails Tests
+- [ ] org.apache.cassandra.db.guardrails.GuardrailAllowFilteringTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailAllowUncompressedTablesTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailAlterTableTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailConsistencyLevelsTester
+- [ ] org.apache.cassandra.db.guardrails.GuardrailDiskUsageTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailDropKeyspaceTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailDropTruncateTableTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailGroupByTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailNewCompactStorageTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailReadBeforeWriteListOperationsTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailsConfigProviderTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailSecondaryIndexTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailSimpleStrategyTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailsTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailTablePropertiesTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailUserTimestampsTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailVectorTypeEnabledTest
+- [ ] org.apache.cassandra.db.guardrails.GuardrailZeroDefaultTTLOnTWCSTest
+- [ ] org.apache.cassandra.db.guardrails.ThresholdTester
+
+## Distributed Fuzz Tests
+- [ ] org.apache.cassandra.distributed.fuzz.FuzzTestBase
+- [ ] org.apache.cassandra.distributed.fuzz.InJvmSut
+
+## Distributed Implementation
+- [ ] org.apache.cassandra.distributed.impl.Instance
+
+## Distributed Tests - Core
+- [ ] org.apache.cassandra.distributed.test.AbstractEncryptionOptionsImpl
+- [ ] org.apache.cassandra.distributed.test.AbstractHintWindowTest
+- [ ] org.apache.cassandra.distributed.test.AbstractNetstatsBootstrapStreaming
+- [ ] org.apache.cassandra.distributed.test.AbstractNetstatsStreaming
+- [ ] org.apache.cassandra.distributed.test.AllowAutoSnapshotTest
+- [ ] org.apache.cassandra.distributed.test.AlterTest
+- [ ] org.apache.cassandra.distributed.test.AuthTest
+- [ ] org.apache.cassandra.distributed.test.AutoSnapshotTtlTest
+- [ ] org.apache.cassandra.distributed.test.BooleanTest
+- [ ] org.apache.cassandra.distributed.test.BootstrapBinaryDisabledTest
+- [ ] org.apache.cassandra.distributed.test.ByteBuddyExamplesTest
+- [ ] org.apache.cassandra.distributed.test.CASAddTest
+- [ ] org.apache.cassandra.distributed.test.CASCommonTestCases
+- [ ] org.apache.cassandra.distributed.test.CASContentionTest
+- [ ] org.apache.cassandra.distributed.test.CasCriticalSectionTest
+- [ ] org.apache.cassandra.distributed.test.CASMultiDCTest
+- [ ] org.apache.cassandra.distributed.test.CASTest
+- [ ] org.apache.cassandra.distributed.test.CASTestBase
+- [ ] org.apache.cassandra.distributed.test.CasWriteTest
+- [ ] org.apache.cassandra.distributed.test.ClearSnapshotTest
+- [ ] org.apache.cassandra.distributed.test.ClientNetworkStopStartTest
+- [ ] org.apache.cassandra.distributed.test.ClusterStorageUsageTest
+- [ ] org.apache.cassandra.distributed.test.CollectionsTest
+- [ ] org.apache.cassandra.distributed.test.ColumnMaskTest
+- [ ] org.apache.cassandra.distributed.test.CompactionDiskSpaceTest
+- [ ] org.apache.cassandra.distributed.test.CompactionOverlappingSSTableTest
+- [ ] org.apache.cassandra.distributed.test.CountersTest
+- [ ] org.apache.cassandra.distributed.test.CryptoProviderTest
+- [ ] org.apache.cassandra.distributed.test.DataResurrectionCheckTest
+- [ ] org.apache.cassandra.distributed.test.DecommissionTest
+- [ ] org.apache.cassandra.distributed.test.DisableBinaryTest
+- [ ] org.apache.cassandra.distributed.test.DistinctReadTest
+- [ ] org.apache.cassandra.distributed.test.DistributedRowUtilTest
+- [ ] org.apache.cassandra.distributed.test.DurableWritesTest
+- [ ] org.apache.cassandra.distributed.test.EphemeralSnapshotTest
+- [ ] org.apache.cassandra.distributed.test.FailingRepairTest
+- [ ] org.apache.cassandra.distributed.test.FailingResponseDoesNotLogTest
+- [ ] org.apache.cassandra.distributed.test.FailingTruncationTest
+- [ ] org.apache.cassandra.distributed.test.FailureLoggingTest
+- [ ] org.apache.cassandra.distributed.test.FrozenUDTTest
+- [ ] org.apache.cassandra.distributed.test.GossipSettlesTest
+- [ ] org.apache.cassandra.distributed.test.GossipShutdownTest
+- [ ] org.apache.cassandra.distributed.test.GossipTest
+- [ ] org.apache.cassandra.distributed.test.GroupByTest
+- [ ] org.apache.cassandra.distributed.test.HintDataReappearingTest
+- [ ] org.apache.cassandra.distributed.test.HintedHandoffAddRemoveNodesTest
+- [ ] org.apache.cassandra.distributed.test.HintedHandoffNodetoolTest
+- [ ] org.apache.cassandra.distributed.test.HintsDisabledTest
+- [ ] org.apache.cassandra.distributed.test.HintsMaxSizeTest
+- [ ] org.apache.cassandra.distributed.test.HintsMaxWindowTest
+- [ ] org.apache.cassandra.distributed.test.HintsPersistentWindowTest
+- [ ] org.apache.cassandra.distributed.test.IncRepairAdminTest
+- [ ] org.apache.cassandra.distributed.test.IncRepairCoordinatorErrorTest
+- [ ] org.apache.cassandra.distributed.test.IncRepairTruncationTest
+- [ ] org.apache.cassandra.distributed.test.IndexDroppingTest
+- [ ] org.apache.cassandra.distributed.test.InternodeEncryptionEnforcementTest
+- [ ] org.apache.cassandra.distributed.test.InternodeEncryptionOptionsTest
+- [ ] org.apache.cassandra.distributed.test.InternodeErrorExclusionTest
+- [ ] org.apache.cassandra.distributed.test.IPMembershipTest
+- [ ] org.apache.cassandra.distributed.test.JVMDTestTest
+- [ ] org.apache.cassandra.distributed.test.JVMStabilityInspectorThrowableTest
+- [ ] org.apache.cassandra.distributed.test.LargeColumnTest
+- [ ] org.apache.cassandra.distributed.test.LargeMessageTest
+- [ ] org.apache.cassandra.distributed.test.LegacyCASTest
+- [ ] org.apache.cassandra.distributed.test.LeveledCompactionTaskTest
+- [ ] org.apache.cassandra.distributed.test.MessageFiltersTest
+- [ ] org.apache.cassandra.distributed.test.MessageForwardingTest
+- [ ] org.apache.cassandra.distributed.test.MessageTimestampTest
+- [ ] org.apache.cassandra.distributed.test.MetricsCountQueriesTest
+- [ ] org.apache.cassandra.distributed.test.MetricsTest
+- [ ] org.apache.cassandra.distributed.test.MigrationCoordinatorTest
+- [ ] org.apache.cassandra.distributed.test.MixedModeFuzzTest
+- [ ] org.apache.cassandra.distributed.test.MoveTest
+- [ ] org.apache.cassandra.distributed.test.MultipleDataDirectoryTest
+- [ ] org.apache.cassandra.distributed.test.NativeMixedVersionTest
+- [ ] org.apache.cassandra.distributed.test.NativeProtocolTest
+- [ ] org.apache.cassandra.distributed.test.NativeTransportEncryptionOptionsTest
+- [ ] org.apache.cassandra.distributed.test.NetstatsBootstrapWithEntireSSTablesCompressionStreamingTest
+- [ ] org.apache.cassandra.distributed.test.NetstatsBootstrapWithoutEntireSSTablesCompressionStreamingTest
+- [ ] org.apache.cassandra.distributed.test.NetstatsRepairStreamingTest
+- [ ] org.apache.cassandra.distributed.test.NetworkTopologyTest
+- [ ] org.apache.cassandra.distributed.test.NodeToolEnableDisableBinaryTest
+- [ ] org.apache.cassandra.distributed.test.NodeToolTest
+- [ ] org.apache.cassandra.distributed.test.OptimiseStreamsRepairTest
+- [ ] org.apache.cassandra.distributed.test.OutOfTokenRangeTest
+- [ ] org.apache.cassandra.distributed.test.OverloadTest
+- [ ] org.apache.cassandra.distributed.test.OversizedMutationTest
+- [ ] org.apache.cassandra.distributed.test.PagingTest
+- [ ] org.apache.cassandra.distributed.test.PartitionDenylistTest
+- [ ] org.apache.cassandra.distributed.test.PaxosRepair2Test
+- [ ] org.apache.cassandra.distributed.test.PaxosRepairTest
+- [ ] org.apache.cassandra.distributed.test.PaxosUncommittedIndexTest
+- [ ] org.apache.cassandra.distributed.test.PrepareBatchStatementsTest
+- [ ] org.apache.cassandra.distributed.test.PreviewRepairSnapshotTest
+- [ ] org.apache.cassandra.distributed.test.PreviewRepairTest
+- [ ] org.apache.cassandra.distributed.test.ProfileLoadTest
+- [ ] org.apache.cassandra.distributed.test.QueriesTableTest
+- [ ] org.apache.cassandra.distributed.test.QueryReplayerEndToEndTest
+- [ ] org.apache.cassandra.distributed.test.ReadDigestConsistencyTest
+- [ ] org.apache.cassandra.distributed.test.ReadFailureTest
+- [ ] org.apache.cassandra.distributed.test.ReadRepairCollectionQueriesTest
+- [ ] org.apache.cassandra.distributed.test.ReadRepairEmptyRangeTombstonesTest
+- [ ] org.apache.cassandra.distributed.test.ReadRepairInQueriesTest
+- [ ] org.apache.cassandra.distributed.test.ReadRepairPointQueriesTest
+- [ ] org.apache.cassandra.distributed.test.ReadRepairQueryTester
+- [ ] org.apache.cassandra.distributed.test.ReadRepairRangeQueriesTest
+- [ ] org.apache.cassandra.distributed.test.ReadRepairSliceQueriesTest
+- [ ] org.apache.cassandra.distributed.test.ReadRepairTest
+- [ ] org.apache.cassandra.distributed.test.ReadRepairTester
+- [ ] org.apache.cassandra.distributed.test.ReadRepairUnrestrictedQueriesTest
+- [ ] org.apache.cassandra.distributed.test.ReadSpeculationTest
+- [ ] org.apache.cassandra.distributed.test.RepairBoundaryTest
+- [ ] org.apache.cassandra.distributed.test.RepairCoordinatorBase
+- [ ] org.apache.cassandra.distributed.test.RepairCoordinatorFailingMessageTest
+- [ ] org.apache.cassandra.distributed.test.RepairCoordinatorFast
+- [ ] org.apache.cassandra.distributed.test.RepairCoordinatorNeighbourDown
+- [ ] org.apache.cassandra.distributed.test.RepairCoordinatorTimeout
+- [ ] org.apache.cassandra.distributed.test.RepairDigestTrackingTest
+- [ ] org.apache.cassandra.distributed.test.RepairErrorsTest
+- [ ] org.apache.cassandra.distributed.test.RepairOperationalTest
+- [ ] org.apache.cassandra.distributed.test.RepairRequestTimeoutTest
+- [ ] org.apache.cassandra.distributed.test.RepairTest
+- [ ] org.apache.cassandra.distributed.test.ReplicaFilteringProtectionTest
+- [ ] org.apache.cassandra.distributed.test.ReprepareFuzzTest
+- [ ] org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest
+- [ ] org.apache.cassandra.distributed.test.ReprepareOldBehaviourTest
+- [ ] org.apache.cassandra.distributed.test.ReprepareTestBase
+- [ ] org.apache.cassandra.distributed.test.ResourceLeakTest
+- [ ] org.apache.cassandra.distributed.test.RestartTest
+- [ ] org.apache.cassandra.distributed.test.SchemaDisagreementTest
+- [ ] org.apache.cassandra.distributed.test.SchemaTest
+- [ ] org.apache.cassandra.distributed.test.SecondaryIndexCompactionTest
+- [ ] org.apache.cassandra.distributed.test.SecondaryIndexTest
+- [ ] org.apache.cassandra.distributed.test.ShortReadProtectionTest
+- [ ] org.apache.cassandra.distributed.test.SimpleReadWriteTest
+- [ ] org.apache.cassandra.distributed.test.SinglePartitionReadCommandTest
+- [ ] org.apache.cassandra.distributed.test.SnapshotsTest
+- [ ] org.apache.cassandra.distributed.test.SSTableIdGenerationTest
+- [ ] org.apache.cassandra.distributed.test.SSTableLoaderEncryptionOptionsTest
+- [ ] org.apache.cassandra.distributed.test.SSTableSkippingReadTest
+- [ ] org.apache.cassandra.distributed.test.StreamingTest
+- [ ] org.apache.cassandra.distributed.test.StreamPrepareFailTest
+- [ ] org.apache.cassandra.distributed.test.StreamsDiskSpaceTest
+- [ ] org.apache.cassandra.distributed.test.SystemKeyspacesDataLocationTest
+- [ ] org.apache.cassandra.distributed.test.TableEstimatesTest
+- [ ] org.apache.cassandra.distributed.test.TableLevelIncrementalBackupsTest
+- [ ] org.apache.cassandra.distributed.test.TestBaseImpl
+- [ ] org.apache.cassandra.distributed.test.TimeoutAbortTest
+- [ ] org.apache.cassandra.distributed.test.TombstoneWarningTest
+- [ ] org.apache.cassandra.distributed.test.TopologyChangeTest
+- [ ] org.apache.cassandra.distributed.test.TopPartitionsTest
+- [ ] org.apache.cassandra.distributed.test.UDFTest
+- [ ] org.apache.cassandra.distributed.test.UnableToParseClientMessageFromBlockedSubnetTest
+- [ ] org.apache.cassandra.distributed.test.UnableToParseClientMessageTest
+- [ ] org.apache.cassandra.distributed.test.UnifiedCompactionDensitiesTest
+- [ ] org.apache.cassandra.distributed.test.UpdateSystemAuthAfterDCExpansionTest
+- [ ] org.apache.cassandra.distributed.test.UpgradeSSTablesTest
+- [ ] org.apache.cassandra.distributed.test.VirtualTableFromInternodeTest
+- [ ] org.apache.cassandra.distributed.test.VirtualTableLogsTest
+
+## Distributed Tests - Auth
+- [ ] org.apache.cassandra.distributed.test.auth.CIDRAuthorizerConfigTest
+
+## Distributed Tests - CDC
+- [ ] org.apache.cassandra.distributed.test.cdc.ToggleCDCOnRepairEnabledTest
+
+## Distributed Tests - FQL
+- [ ] org.apache.cassandra.distributed.test.fql.FqlReplayDDLExclusionTest
+- [ ] org.apache.cassandra.distributed.test.fql.FqlTombstoneHandlingTest
+
+## Distributed Tests - Gossip
+- [ ] org.apache.cassandra.distributed.test.gossip.GossipShutdownTest
+
+## Distributed Tests - Guardrails
+- [ ] org.apache.cassandra.distributed.test.guardrails.GuardrailCollectionSizeOnSSTableWriteTest
+- [ ] org.apache.cassandra.distributed.test.guardrails.GuardrailDiskUsageTest
+- [ ] org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest
+- [ ] org.apache.cassandra.distributed.test.guardrails.GuardrailNonPartitionRestrictedQueryTest
+- [ ] org.apache.cassandra.distributed.test.guardrails.GuardrailPartitionSizeTest
+- [ ] org.apache.cassandra.distributed.test.guardrails.GuardrailPartitionTombstonesTest
+- [ ] org.apache.cassandra.distributed.test.guardrails.GuardrailTester
+- [ ] org.apache.cassandra.distributed.test.guardrails.IntersectFilteringQueryTest
+
+## Distributed Tests - Host Replacement
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.AssassinateAbruptDownedNodeTest
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.AssassinatedEmptyNodeTest
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.AssassinateGracefullNodeTest
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.BaseAssassinatedCase
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.FailedBootstrapTest
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.HostReplacementAbruptDownedInstanceTest
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.HostReplacementOfDownedClusterTest
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.HostReplacementTest
+- [ ] org.apache.cassandra.distributed.test.hostreplacement.NodeCannotJoinAsHibernatingNodeWithoutReplaceAddressTest
+
+## Distributed Tests - JMX
+- [ ] org.apache.cassandra.distributed.test.jmx.JMXFeatureTest
+- [ ] org.apache.cassandra.distributed.test.jmx.JMXGetterCheckTest
+
+## Distributed Tests - Metrics
+- [ ] org.apache.cassandra.distributed.test.metrics.CoordinatorReadLatencyMetricTest
+- [ ] org.apache.cassandra.distributed.test.metrics.HintsServiceMetricsTest
+- [ ] org.apache.cassandra.distributed.test.metrics.RequestTimeoutTest
+- [ ] org.apache.cassandra.distributed.test.metrics.StreamingMetricsTest
+
+## Distributed Tests - Metric
+- [ ] org.apache.cassandra.distributed.test.metric.TableMetricTest
+
+## Distributed Tests - Repair
+- [ ] org.apache.cassandra.distributed.test.repair.ConcurrentValidationRequestsTest
+- [ ] org.apache.cassandra.distributed.test.repair.ForceRepairTest
+
+## Distributed Tests - Ring
+- [ ] org.apache.cassandra.distributed.test.ring.AutoBootstrapTest
+- [ ] org.apache.cassandra.distributed.test.ring.BootstrapTest
+- [ ] org.apache.cassandra.distributed.test.ring.CleanupFailureTest
+- [ ] org.apache.cassandra.distributed.test.ring.CommunicationDuringDecommissionTest
+- [ ] org.apache.cassandra.distributed.test.ring.NodeNotInRingTest
+- [ ] org.apache.cassandra.distributed.test.ring.PendingWritesTest
+- [ ] org.apache.cassandra.distributed.test.ring.ReadsDuringBootstrapTest
+
+## Distributed Tests - SAI
+- [ ] org.apache.cassandra.distributed.test.sai.ConcurrencyFactorTest
+- [ ] org.apache.cassandra.distributed.test.sai.ImportIndexedSSTablesTest
+- [ ] org.apache.cassandra.distributed.test.sai.IndexAvailabilityTest
+- [ ] org.apache.cassandra.distributed.test.sai.IndexStreamingFailureTest
+- [ ] org.apache.cassandra.distributed.test.sai.IndexStreamingTest
+- [ ] org.apache.cassandra.distributed.test.sai.PartialUpdateHandlingTest
+- [ ] org.apache.cassandra.distributed.test.sai.PartialWritesWithRepairTest
+- [ ] org.apache.cassandra.distributed.test.sai.ReplicaFilteringWithStaticsTest
+- [ ] org.apache.cassandra.distributed.test.sai.SAIUtil
+- [ ] org.apache.cassandra.distributed.test.sai.StrictFilteringTest
+- [ ] org.apache.cassandra.distributed.test.sai.VectorDistributedTest
+- [ ] org.apache.cassandra.distributed.test.sai.VectorValidationTest
+
+## Distributed Tests - Streaming
+- [ ] org.apache.cassandra.distributed.test.streaming.AbstractStreamFailureLogs
+- [ ] org.apache.cassandra.distributed.test.streaming.LCSStreamingKeepLevelTest
+- [ ] org.apache.cassandra.distributed.test.streaming.RebuildStreamingTest
+- [ ] org.apache.cassandra.distributed.test.streaming.StreamCloseInMiddleTest
+- [ ] org.apache.cassandra.distributed.test.streaming.StreamDisconnectedWhileReceivingTest
+- [ ] org.apache.cassandra.distributed.test.streaming.StreamFailedWhileReceivingTest
+- [ ] org.apache.cassandra.distributed.test.streaming.StreamFailureLogsFailureDueToSessionFailedTest
+- [ ] org.apache.cassandra.distributed.test.streaming.StreamFailureLogsFailureDueToSessionTimeoutTest
+- [ ] org.apache.cassandra.distributed.test.streaming.StreamFailureLogsFailureInTheMiddleWithEOFTest
+- [ ] org.apache.cassandra.distributed.test.streaming.StreamFailureLogsFailureInTheMiddleWithUnknownTest
+- [ ] org.apache.cassandra.distributed.test.streaming.StreamingStatsDisabledTest
+
+## Distributed Tests - Thresholds
+- [ ] org.apache.cassandra.distributed.test.thresholds.AbstractClientSizeWarning
+- [ ] org.apache.cassandra.distributed.test.thresholds.CoordinatorReadSizeWarningTest
+- [ ] org.apache.cassandra.distributed.test.thresholds.LocalReadSizeWarningTest
+- [ ] org.apache.cassandra.distributed.test.thresholds.RowIndexSizeWarningTest
+- [ ] org.apache.cassandra.distributed.test.thresholds.TombstoneCountWarningTest
+
+## Distributed Tests - Topology
+- [ ] org.apache.cassandra.distributed.test.topology.DecommissionAvoidTimeouts
+
+## Repair Tests
+- [ ] org.apache.cassandra.repair.ConcurrentIrWithPreviewFuzzTest
+- [ ] org.apache.cassandra.repair.FailedAckTest
+- [ ] org.apache.cassandra.repair.FailingRepairFuzzTest
+- [ ] org.apache.cassandra.repair.HappyPathFuzzTest
+- [ ] org.apache.cassandra.repair.SlowMessageFuzzTest
+
+## Simulator Tests - Cluster
+- [ ] org.apache.cassandra.simulator.cluster.ClusterActions
+- [ ] org.apache.cassandra.simulator.cluster.KeyspaceActions
+
+## Simulator Tests - Core
+- [ ] org.apache.cassandra.simulator.ClusterSimulation
+- [ ] org.apache.cassandra.simulator.Debug
+
+## Simulator Tests - Paxos
+- [ ] org.apache.cassandra.simulator.paxos.Ballots
+- [ ] org.apache.cassandra.simulator.paxos.PairOfSequencesPaxosSimulation
+- [ ] org.apache.cassandra.simulator.paxos.PaxosRepairValidator
+- [ ] org.apache.cassandra.simulator.paxos.PaxosSimulation
+- [ ] org.apache.cassandra.simulator.paxos.PaxosTopologyChangeVerifier
+
+## Simulator Tests - Systems
+- [ ] org.apache.cassandra.simulator.systems.SimulatedFailureDetector
+- [ ] org.apache.cassandra.simulator.systems.SimulatedSnitch
+
+## Simulator Tests - Test
+- [ ] org.apache.cassandra.simulator.test.MonitorMethodTransformerTest
+- [ ] org.apache.cassandra.simulator.test.SimulationTestBase
+- [ ] org.apache.cassandra.simulator.test.TrivialSimulationTest
