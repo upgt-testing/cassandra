@@ -357,6 +357,14 @@
             <include name="**/*.jar" />
             <exclude name="**/ant-*.jar"/>
         </fileset>
+        <!-- Restart adapter for restart-injected tests -->
+        <fileset dir="${basedir}/restart-adapter/dist" erroronmissingdir="false">
+            <include name="cassandra-restart-adapter-*.jar"/>
+        </fileset>
+        <!-- Restart Testing Framework core -->
+        <fileset dir="/home/shuai/xlab/restart_testing/RestartTestingFramework/restart-core/target" erroronmissingdir="false">
+            <include name="restart-core-*.jar"/>
+        </fileset>
     </path>
 
   <macrodef name="create-javadoc">
@@ -1014,7 +1022,11 @@
     <antcall target="build-test" inheritRefs="true"/>
   </target>
 
-  <target name="build-test" depends="_main-jar,stress-build-test,fqltool-build,resolver-dist-lib,simulator-jars"
+  <target name="build-restart-adapter" description="Build the restart adapter JAR">
+    <ant dir="${basedir}/restart-adapter" target="jar" inheritAll="false"/>
+  </target>
+
+  <target name="build-test" depends="_main-jar,stress-build-test,fqltool-build,resolver-dist-lib,simulator-jars,build-restart-adapter"
           description="Compile test classes">
     <antcall target="_build-test"/>
     <antcall target="_check-test-names"/>
@@ -1089,7 +1101,7 @@
     </macrodef>
 
   <target name="_check-test-names">
-      <check-test-names annotationName="org.junit.Test" regex=".*Test$"/>
+      <check-test-names annotationName="org.junit.Test" regex=".*(Test|_RestartInjected)$"/>
       <check-test-names annotationName="org.openjdk.jmh.annotations.Benchmark" regex=".*(Bench|_jmhType.*)$"/>
   </target>
 
