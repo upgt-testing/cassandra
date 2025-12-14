@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.apache.cassandra</groupId>
+    <artifactId>cassandra-restart-testing</artifactId>
+    <version>5.0.6-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Apache Cassandra - Restart Testing Wrapper</name>
+    <description>Minimal POM wrapper for running restart tests in Ant-based Cassandra project</description>
+
+    <properties>
+        <!-- Can be overridden with -Drestart.config=... -->
+        <restart.config>${project.basedir}/restart-tests.json</restart.config>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.restarttest</groupId>
+                <artifactId>restart-maven-plugin</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <configuration>
+                    <configFile>${restart.config}</configFile>
+                    <reportDir>${project.basedir}/target/restart-reports</reportDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
