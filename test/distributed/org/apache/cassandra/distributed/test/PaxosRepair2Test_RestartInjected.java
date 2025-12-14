@@ -385,7 +385,7 @@ public class PaxosRepair2Test_RestartInjected extends TestBaseImpl
 
     private static void assertLowBoundPurged(Cluster cluster)
     {
-        cluster.forEach(PaxosRepair2Test::assertLowBoundPurged);
+        cluster.forEach(PaxosRepair2Test_RestartInjected::assertLowBoundPurged);
     }
 
     @Test

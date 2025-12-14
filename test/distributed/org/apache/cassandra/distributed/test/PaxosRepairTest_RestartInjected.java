@@ -443,7 +443,7 @@ public class PaxosRepairTest_RestartInjected extends TestBaseImpl
                 .withMode(RestartMode.GRACEFUL)
                 .execute();
             Assert.assertFalse(hasUncommitted(cluster, KEYSPACE, TABLE));
-            cluster.forEach(i -> i.runOnInstance(PaxosRepairTest::compactPaxos));
+            cluster.forEach(i -> i.runOnInstance(PaxosRepairTest_RestartInjected::compactPaxos));
             for (int i = 1 ; i <= 3 ; ++i)
                 assertRows(cluster.get(i).executeInternal("SELECT * FROM " + KEYSPACE + '.' + TABLE + " WHERE pk = 1"), row(1, 1, 1));
 
@@ -700,7 +700,7 @@ public class PaxosRepairTest_RestartInjected extends TestBaseImpl
         }
     }
 
-    private static void compactPaxos()
+    public static void compactPaxos()
     {
         ColumnFamilyStore paxos = Keyspace.open(SYSTEM_KEYSPACE_NAME).getColumnFamilyStore(SystemKeyspace.PAXOS);
         FBUtilities.waitOnFuture(paxos.forceFlush(ColumnFamilyStore.FlushReason.UNIT_TESTS));
@@ -749,6 +749,6 @@ public class PaxosRepairTest_RestartInjected extends TestBaseImpl
 
     private static void assertLowBoundPurged(Cluster cluster)
     {
-        cluster.forEach(PaxosRepairTest::assertLowBoundPurged);
+        cluster.forEach(PaxosRepairTest_RestartInjected::assertLowBoundPurged);
     }
 }

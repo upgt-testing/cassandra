@@ -54,7 +54,7 @@ public class RepairCoordinatorFailingMessageTest_RestartInjected extends TestBas
     private final RepairType repairType;
     private final boolean withNotifications;
 
-    public RepairCoordinatorFailingMessageTest(RepairType repairType, boolean withNotifications)
+    public RepairCoordinatorFailingMessageTest_RestartInjected(RepairType repairType, boolean withNotifications)
     {
         this.repairType = repairType;
         this.withNotifications = withNotifications;

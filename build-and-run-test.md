@@ -6,7 +6,7 @@ This guide explains how to build the Cassandra distributed tests with restart in
 
 **Build System**: Apache Ant (using `build.xml` files)
 **Test Framework**: JUnit with Cassandra's distributed test infrastructure
-**Total Restart-Injected Tests**: 190 test files in `test/distributed/` module (2 have known issues)
+**Total Restart-Injected Tests**: 203 test files in `test/distributed/` module
 
 ## Prerequisites
 
@@ -130,14 +130,6 @@ The build system has been modified to support restart-injected tests:
 2. **Build dependency** (`build.xml:1021-1023`): Added `build-restart-adapter` target
 3. **Test naming convention** (`build.xml:1104`): Updated to accept `*_RestartInjected` naming pattern
 
-## Known Issues
-
-Two test files have compilation issues and have been temporarily excluded:
-- `PaxosRepair2Test_RestartInjected.java` (method reference errors)
-- `PaxosRepairTest_RestartInjected.java` (private method access errors)
-
-These tests are renamed with `.skip` extension and will be addressed separately.
-
 ## Troubleshooting
 
 1. **"Unsupported JDK version used: 1.8"**: You need to set `JAVA_HOME` to Java 17 and use `-Duse.jdk17=true`
@@ -169,17 +161,27 @@ ant test-jvm-dtest-some -Duse.jdk17=true -Dtest.name=org.apache.cassandra.distri
 
 ## Summary of Required Changes
 
-To get the restart-injected tests working, the following changes were made:
+To get all 203 restart-injected tests working, the following changes were made:
 
-1. **Fixed constructor names**: Two test files had constructors that didn't match their class names
+1. **Fixed constructor names** (2 files): Test files had constructors that didn't match their class names
    - `RepairCoordinatorFailingMessageTest_RestartInjected.java:57`
    - `TopPartitionsTest_RestartInjected.java:65`
 
-2. **Modified `build.xml`**:
+2. **Fixed method references** (3 files): Method references used old class names without `_RestartInjected` suffix
+   - `PaxosRepair2Test_RestartInjected.java:388`
+   - `PaxosRepairTest_RestartInjected.java:446, 752`
+   - `ResourceLeakTest_RestartInjected.java:279`
+
+3. **Fixed method visibility** (1 file): Made private method public for method reference usage
+   - `PaxosRepairTest_RestartInjected.java:703`
+
+4. **Modified `build.xml`**:
    - Added restart-adapter and restart-core JARs to test classpath
    - Added `build-restart-adapter` target
    - Updated test naming convention regex to accept `*_RestartInjected` pattern
 
-3. **Excluded problematic tests**: Two tests with method reference errors were temporarily excluded
+**Result**: All 203 tests now compile and build successfully!
+
+See `FIXES_SUMMARY.md` for detailed information about each fix.
 
 All tested commands have been verified to work successfully!

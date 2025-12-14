@@ -276,7 +276,7 @@ public class ResourceLeakTest_RestartInjected extends TestBaseImpl
     @Test
     public void looperJmxTest() throws Throwable
     {
-        doTest(2, config -> config.with(JMX), ResourceLeakTest::testJmx);
+        doTest(2, config -> config.with(JMX), ResourceLeakTest_RestartInjected::testJmx);
         if (forceCollection)
         {
             System.runFinalization();

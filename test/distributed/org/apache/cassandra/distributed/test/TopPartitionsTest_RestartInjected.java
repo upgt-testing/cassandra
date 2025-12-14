@@ -62,7 +62,7 @@ public class TopPartitionsTest_RestartInjected extends TestBaseImpl
 
     private final Repair repair;
 
-    public TopPartitionsTest(Repair repair)
+    public TopPartitionsTest_RestartInjected(Repair repair)
     {
         this.repair = repair;
     }
