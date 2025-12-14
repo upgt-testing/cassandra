@@ -1,0 +1,6994 @@
+{
+  "tests": [
+    {
+      "testClass": "org.apache.cassandra.distributed.test.SimpleReadWriteTest_RestartInjected",
+      "testMethod": "testPartitionQuery",
+      "restartPoints": [
+        {
+          "position": "after_write",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.SimpleReadWriteTest_RestartInjected",
+      "testMethod": "testRangeQuery",
+      "restartPoints": [
+        {
+          "position": "after_write",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.SimpleReadWriteTest_RestartInjected",
+      "testMethod": "testSliceQuery",
+      "restartPoints": [
+        {
+          "position": "after_write",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.SimpleReadWriteTest_RestartInjected",
+      "testMethod": "testInQuery",
+      "restartPoints": [
+        {
+          "position": "after_write",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AllowAutoSnapshotTest_RestartInjected",
+      "testMethod": "testAllowAutoSnapshotOnAutoSnapshotEnabled",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table2_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table2_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AllowAutoSnapshotTest_RestartInjected",
+      "testMethod": "testAllowAutoSnapshotOnAutoSnapshotDisabled",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table2_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table2_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AllowAutoSnapshotTest_RestartInjected",
+      "testMethod": "testDisableAndEnableAllowAutoSnapshot",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_disable_snapshot",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_enable_snapshot",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AllowAutoSnapshotTest_RestartInjected",
+      "testMethod": "testTruncateAllowAutoSnapshot",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_truncate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table2_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_truncate2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AllowAutoSnapshotTest_RestartInjected",
+      "testMethod": "testMaterializedViewAllowAutoSnapshot",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_mv_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_mv_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_mv2_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_mv2_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AlterTest_RestartInjected",
+      "testMethod": "getAndSetCompressionParametersTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_set_compression",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_alter_add_column",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AlterTest_RestartInjected",
+      "testMethod": "alteringKeyspaceOnInsufficientNumberOfReplicasFiltersOutGossppingOnlyMembersTest",
+      "restartPoints": [
+        {
+          "position": "after_bootstrap",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_gossip_settle",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_keyspace_operations",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AlterTest_RestartInjected",
+      "testMethod": "unknownMemtableConfigurationTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node2_add",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_alter_fail",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_alter_success",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node3_add",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert_node1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_insert_node2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_insert_node3",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AuthTest_RestartInjected",
+      "testMethod": "authSetupIsCalledAfterStartup",
+      "restartPoints": [
+        {
+          "position": "after_authsetup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AuthTest_RestartInjected",
+      "testMethod": "testZeroTimestampForDefaultRoleCreation",
+      "restartPoints": [
+        {
+          "position": "after_roles_exist",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_get_writetime",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_password_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_second_node_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_second_node_roles",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_login_second_node",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filters_off",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_peers_appear",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_alter_replication",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_repair",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_final_login",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AutoSnapshotTtlTest_RestartInjected",
+      "testMethod": "testAutoSnapshotTTlOnTruncate",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_truncate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_snapshot_check",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AutoSnapshotTtlTest_RestartInjected",
+      "testMethod": "testAutoSnapshotTTlOnDrop",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_table_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_snapshot_check",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AutoSnapshotTtlTest_RestartInjected",
+      "testMethod": "testAutoSnapshotTTlOnDropAfterRestart",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_table_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_manual_restart",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_snapshot_check",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.AutoSnapshotTtlTest_RestartInjected",
+      "testMethod": "testAutoSnapshotTtlDisabled",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_truncate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_snapshot_check",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.BooleanTest_RestartInjected",
+      "testMethod": "booleanTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_getsstables",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.BootstrapBinaryDisabledTest_RestartInjected",
+      "testMethod": "test",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_first_bootstrap",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_second_bootstrap",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ByteBuddyExamplesTest_RestartInjected",
+      "testMethod": "writeFailureTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_write_attempt",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ByteBuddyExamplesTest_RestartInjected",
+      "testMethod": "countTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_select_node1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_select_node2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASAddTest_RestartInjected",
+      "testMethod": "testAddition",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_failed_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_successful_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASAddTest_RestartInjected",
+      "testMethod": "testAdditionNotExists",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_null_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_null_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_batch_errors",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_real_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASAddTest_RestartInjected",
+      "testMethod": "testConcat",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_failed_cas_concat",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_successful_cas_concat",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected",
+      "testMethod": "simpleUpdate",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_failed_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_successful_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected",
+      "testMethod": "incompletePrepare",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_prepare",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_off",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected",
+      "testMethod": "incompletePropose",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_propose",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_off",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_prepare_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected",
+      "testMethod": "incompleteCommit",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_commit",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update_with_filter",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected",
+      "testMethod": "testRepairIncompletePropose",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_propose_timeout",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_repair_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected",
+      "testMethod": "testRepairIncompleteCommit",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_commit_timeout",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_repair_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASContentionTest_RestartInjected",
+      "testMethod": "testDynamicContentionTracing",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_contention_strategy_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_first_insert_started",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_second_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_reset",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_first_insert_complete",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_tracing_complete",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_trace_query",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasCriticalSectionTest_RestartInjected",
+      "testMethod": "criticalSectionTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_initial_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_threads_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_sleep",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_stop_set",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_threads_join",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASMultiDCTest_RestartInjected",
+      "testMethod": "testLocalSerialLocalCommit",
+      "restartPoints": [
+        {
+          "position": "before_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASMultiDCTest_RestartInjected",
+      "testMethod": "testLocalSerialQuorumCommit",
+      "restartPoints": [
+        {
+          "position": "before_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASMultiDCTest_RestartInjected",
+      "testMethod": "testSerialLocalCommit",
+      "restartPoints": [
+        {
+          "position": "before_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASMultiDCTest_RestartInjected",
+      "testMethod": "testSerialQuorumCommit",
+      "restartPoints": [
+        {
+          "position": "before_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASMultiDCTest_RestartInjected",
+      "testMethod": "testDcLocalCommitDisabled",
+      "restartPoints": [
+        {
+          "position": "after_dc_local_commit_disabled",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "testIncompleteWriteSupersededByConflictingRejectedCondition",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_timeout",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "fastReadsAndFailedWrites",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_serial_reads",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "testSuccessfulWriteBeforeRangeMovement",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_ring_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "testConflictingWritesWithStaleRingInformation",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_first_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_second_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "testSucccessfulWriteDuringRangeMovementFollowedByRead",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_bootstrap_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_topology_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "testSuccessfulWriteDuringRangeMovementFollowedByConflicting",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_bootstrap_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_topology_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "testIncompleteWriteFollowedBySuccessfulWriteWithStaleRingDuringRangeMovementFollowedByRead",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_bootstrap_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_cas",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_second_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_topology_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "testIncompleteWriteFollowedBySuccessfulWriteWithStaleRingDuringRangeMovementFollowedByWrite",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_bootstrap_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_cas",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_second_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_topology_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+      "testMethod": "testWriteTimeoutExceptionUsingPaxosInLwtPerformaceTest",
+      "restartPoints": [
+        {
+          "position": "after_keyspace_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testCasWriteSuccessWithNoContention",
+      "restartPoints": [
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testCasWriteTimeoutAtPreparePhase_ReqLost",
+      "restartPoints": [
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testCasWriteTimeoutAtPreparePhase_RspLost",
+      "restartPoints": [
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testCasWriteTimeoutAtProposePhase_ReqLost",
+      "restartPoints": [
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testCasWriteTimeoutAtProposePhase_RspLost",
+      "restartPoints": [
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testCasWriteTimeoutAtCommitPhase_ReqLost",
+      "restartPoints": [
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testCasWriteTimeoutAtCommitPhase_RspLost",
+      "restartPoints": [
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "casWriteContentionTimeoutTest",
+      "restartPoints": [
+        {
+          "position": "before_contention_test",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testWriteUnknownResult",
+      "restartPoints": [
+        {
+          "position": "after_filter_reset",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CasWriteTest_RestartInjected",
+      "testMethod": "testStaleCommitInSystemPaxos",
+      "restartPoints": [
+        {
+          "position": "after_filter_reset",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_purge_config",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_delete",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "before_compact",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_compact",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ClearSnapshotTest_RestartInjected",
+      "testMethod": "clearSnapshotSlowTest",
+      "restartPoints": [
+        {
+          "position": "after_schema_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_repair_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_active_repairs",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node_shutdown",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ClearSnapshotTest_RestartInjected",
+      "testMethod": "testSeqClearsSnapshot",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_repair",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ClientNetworkStopStartTest_RestartInjected",
+      "testMethod": "stopStartNative",
+      "restartPoints": [
+        {
+          "position": "after_disable_binary",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_enable_binary",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_native_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_query",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ClusterStorageUsageTest_RestartInjected",
+      "testMethod": "testNoReplication",
+      "restartPoints": [
+        {
+          "position": "after_populate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_metrics",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ClusterStorageUsageTest_RestartInjected",
+      "testMethod": "testSimpleReplication",
+      "restartPoints": [
+        {
+          "position": "after_populate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_metrics",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ClusterStorageUsageTest_RestartInjected",
+      "testMethod": "testMultiDatacenterReplication",
+      "restartPoints": [
+        {
+          "position": "after_keyspace_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_populate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_metrics",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CollectionsTest_RestartInjected",
+      "testMethod": "testMultipleSetsComplexDeletion",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_query_node1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_query_node2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ColumnMaskTest_RestartInjected",
+      "testMethod": "testMaskPropagation",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert_data",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_default_mask",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_mask",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_unmasked",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_apply_mask_inner_1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_mask_inner_1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_apply_mask_inner_2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_mask_inner_2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.ColumnMaskTest_RestartInjected",
+      "testMethod": "testMaskLoading",
+      "restartPoints": [
+        {
+          "position": "after_function_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_initial_masks",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_alter_masks",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_altered_masks",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CompactionDiskSpaceTest_RestartInjected",
+      "testMethod": "testNoSpaceLeft",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_compaction_tests",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CompactionOverlappingSSTableTest_RestartInjected",
+      "testMethod": "partialCompactionOverlappingTest",
+      "restartPoints": [
+        {
+          "position": "after_keyspace_alter",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_initial_inserts",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_initial_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_deletes_and_flushes",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "before_compaction",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_compaction",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CountersTest_RestartInjected",
+      "testMethod": "testUpdateCounter",
+      "restartPoints": [
+        {
+          "position": "after_keyspace_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_counter_increment",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_counter_decrement",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CountersTest_RestartInjected",
+      "testMethod": "testUpdateCounterWithDroppedCompactStorage",
+      "restartPoints": [
+        {
+          "position": "after_keyspace_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_compact_storage",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_counter_increment",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_counter_decrement",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CryptoProviderTest_RestartInjected",
+      "testMethod": "testDefaultCryptoProvider",
+      "restartPoints": [
+        {
+          "position": "after_cluster_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_provider_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CryptoProviderTest_RestartInjected",
+      "testMethod": "testUsingJREProvider",
+      "restartPoints": [
+        {
+          "position": "after_cluster_startup_jre",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_jre_provider_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CryptoProviderTest_RestartInjected",
+      "testMethod": "testUsingNoProviderUsesJREProvider",
+      "restartPoints": [
+        {
+          "position": "after_cluster_startup_default",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_default_provider_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.CryptoProviderTest_RestartInjected",
+      "testMethod": "testFailedDefaultProviderInstallationShouldResumeStartup",
+      "restartPoints": [
+        {
+          "position": "after_failed_provider_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_failed_provider_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.DataResurrectionCheckTest_RestartInjected",
+      "testMethod": "testDataResurrectionCheck",
+      "restartPoints": [
+        {
+          "position": "after_heartbeat_check",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_schema_creation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_violation_detection",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_exclusion_tests",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected",
+      "testMethod": "testDecommission",
+      "restartPoints": [
+        {
+          "position": "after_decommission_tests",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected",
+      "testMethod": "testDecommissionAfterNodeRestart",
+      "restartPoints": [
+        {
+          "position": "after_failed_decommission",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_manual_restart",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_successful_decommission",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.DisableBinaryTest_RestartInjected",
+      "testMethod": "testFinishInProgressQueries",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_blocking_enabled",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_disable_binary",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.DisableBinaryTest_RestartInjected",
+      "testMethod": "testDisallowsNewRequests",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_blocking_enabled",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_transport_stop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.DistinctReadTest_RestartInjected",
+      "testMethod": "test",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_delete",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_distinct_queries",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.DistributedRowUtilTest_RestartInjected",
+      "testMethod": "correctColumnsReturnedForOrderedResults",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_query",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.DurableWritesTest_RestartInjected",
+      "testMethod": "durableWritesDisabledTest",
+      "restartPoints": [
+        {
+          "position": "after_keyspace_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_keyspace_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_inserts",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_commitlog_check",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.EphemeralSnapshotTest_RestartInjected",
+      "testMethod": "testStartupRemovesEphemeralSnapshotOnEphemeralFlagInManifest",
+      "restartPoints": [
+        {
+          "position": "after_initialization",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_manifest_rewrite",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.EphemeralSnapshotTest_RestartInjected",
+      "testMethod": "testStartupRemovesEphemeralSnapshotOnMarkerFile",
+      "restartPoints": [
+        {
+          "position": "after_initialization",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_marker_file_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.EphemeralSnapshotTest_RestartInjected",
+      "testMethod": "testEphemeralSnapshotIsNotClearableFromNodetool",
+      "restartPoints": [
+        {
+          "position": "after_initialization",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_manifest_rewrite",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_listsnapshots",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_clearsnapshot_attempt",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.EphemeralSnapshotTest_RestartInjected",
+      "testMethod": "testClearingAllSnapshotsFromNodetoolWillKeepEphemeralSnaphotsIntact",
+      "restartPoints": [
+        {
+          "position": "after_initialization",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_manifest_rewrite",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_clearsnapshot_all",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FailingRepairTest_RestartInjected",
+      "testMethod": "testFailingMessage",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_consistent_writes",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_lhs_writes",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_rhs_writes",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_failure_injection",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_repair_submit",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FailingResponseDoesNotLogTest_RestartInjected",
+      "testMethod": "dispatcherErrorDoesNotLock",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_failed_query",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FailingTruncationTest_RestartInjected",
+      "testMethod": "testFailingTruncation",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_truncate_failure",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FailureLoggingTest_RestartInjected",
+      "testMethod": "testRequestBootstrapFail",
+      "restartPoints": [
+        {
+          "position": "after_bootstrap_state_set",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_bootstrap_fail_logged",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FailureLoggingTest_RestartInjected",
+      "testMethod": "testRangeRequestFail",
+      "restartPoints": [
+        {
+          "position": "after_range_fail_logged",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FailureLoggingTest_RestartInjected",
+      "testMethod": "testReadRequestFail",
+      "restartPoints": [
+        {
+          "position": "after_read_fail_logged",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FrozenUDTTest_RestartInjected",
+      "testMethod": "testAddAndUDTField",
+      "restartPoints": [
+        {
+          "position": "after_udt_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_initial_inserts",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_alter_type",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FrozenUDTTest_RestartInjected",
+      "testMethod": "testEmptyValue",
+      "restartPoints": [
+        {
+          "position": "after_empty_value_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_empty_value_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_empty_value_alter_type",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_empty_value_final_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FrozenUDTTest_RestartInjected",
+      "testMethod": "testUpgradeSStables",
+      "restartPoints": [
+        {
+          "position": "after_upgrade_sstables_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_upgrade_sstables_first_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_upgrade_sstables_second_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_upgrade_sstables",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_upgrade_sstables_compact",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.FrozenUDTTest_RestartInjected",
+      "testMethod": "testDivergentSchemas",
+      "restartPoints": [
+        {
+          "position": "after_divergent_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_divergent_alter_type",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_divergent_inserts",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_divergent_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.GossipSettlesTest_RestartInjected",
+      "testMethod": "testGossipSettles",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_gossip_stop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.GossipShutdownTest_RestartInjected",
+      "testMethod": "shutdownStayDownTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_inserts",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_gossip_exchange",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.GossipTest_RestartInjected",
+      "testMethod": "nodeDownDuringMove",
+      "restartPoints": [
+        {
+          "position": "after_normal_state",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_moving_state",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_late_node_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.GossipTest_RestartInjected",
+      "testMethod": "testBusyGossipBusyShouldNotCreateParitialGossipInfoOnOtherNodes",
+      "restartPoints": [
+        {
+          "position": "after_new_node_gossip_propagate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node_removed",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_gossip_recovery",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.GossipTest_RestartInjected",
+      "testMethod": "testPreventStoppingGossipDuringBootstrap",
+      "restartPoints": [
+        {
+          "position": "after_cluster_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.GossipTest_RestartInjected",
+      "testMethod": "testPreventEnablingGossipDuringMove",
+      "restartPoints": [
+        {
+          "position": "after_gossip_operations",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.GossipTest_RestartInjected",
+      "testMethod": "gossipShutdownUpdatesTokenMetadata",
+      "restartPoints": [
+        {
+          "position": "after_populate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_move_initiation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.GossipTest_RestartInjected",
+      "testMethod": "restartGossipOnGossippingOnlyMember",
+      "restartPoints": [
+        {
+          "position": "after_gossip_running_check",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_gossip_restart",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintedHandoffAddRemoveNodesTest_RestartInjected",
+      "testMethod": "shouldAvoidHintTransferOnDecommission",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_initial_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_hint_write",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_decommission",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintedHandoffAddRemoveNodesTest_RestartInjected",
+      "testMethod": "shouldStreamHintsDuringDecommission",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_population",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_hints_accumulate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_first_decommission",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node4_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_hint_delivery",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_final_decommissions",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintedHandoffAddRemoveNodesTest_RestartInjected",
+      "testMethod": "shouldBootstrapWithHintsOutstanding",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_population",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_hints_accumulate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_bootstrap",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node3_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_hint_delivery",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintedHandoffNodetoolTest_RestartInjected",
+      "testMethod": "testDisableHandoff",
+      "restartPoints": [
+        {
+          "position": "after_disable_handoff",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_enable_handoff",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintedHandoffNodetoolTest_RestartInjected",
+      "testMethod": "testDisableForDC",
+      "restartPoints": [
+        {
+          "position": "after_disable_hints_for_dc",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_enable_hints_for_dc",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintedHandoffNodetoolTest_RestartInjected",
+      "testMethod": "testPauseHandoff",
+      "restartPoints": [
+        {
+          "position": "after_pause_handoff",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_resume_handoff",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintedHandoffNodetoolTest_RestartInjected",
+      "testMethod": "testThrottle",
+      "restartPoints": [
+        {
+          "position": "after_set_throttle",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintedHandoffNodetoolTest_RestartInjected",
+      "testMethod": "testMaxHintWindow",
+      "restartPoints": [
+        {
+          "position": "after_set_max_hint_window",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintsDisabledTest_RestartInjected",
+      "testMethod": "testHintedHandoffDisabled",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintsMaxSizeTest_RestartInjected",
+      "testMethod": "testMaxHintedHandoffSize",
+      "restartPoints": [
+        {
+          "position": "after_wait_existing_roles",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_get_node2_uuid",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_node2_shutdown",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_data_insertion",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_hints_count",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_first_assert_hints_sizes",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_node1_restart",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintsMaxWindowTest_RestartInjected",
+      "testMethod": "testHintsKeepRecordingAfterNodeGoesOfflineRepeatedly",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_get_node_uuid",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_first_node_shutdown",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_first_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_first_hints_assertion",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_node_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_hints_delivered",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_second_node_shutdown",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_second_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_second_hints_assertion",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_max_hint_window_wait",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_third_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.HintsPersistentWindowTest_RestartInjected",
+      "testMethod": "testPersistentHintWindow",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_get_node_uuid",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_first_node_shutdown",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_first_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_first_hints_assertion",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_pause_hints_delivery",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_max_hint_window_wait",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_hints_size_assertion",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_second_node_shutdown",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_second_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IncRepairAdminTest_RestartInjected",
+      "testMethod": "testRepairAdminSummarizePending",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_repair_admin_summarize",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IncRepairAdminTest_RestartInjected",
+      "testMethod": "testManualSessionFail",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_check_no_sessions",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_make_fake_session",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_await_repairing_state",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cancel_command",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_still_repairing",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_verify_failed_state",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IncRepairAdminTest_RestartInjected",
+      "testMethod": "testManualSessionCancelNonCoordinatorFailure",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_check_no_sessions",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_make_fake_session",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_await_repairing_state",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cancel_command",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_still_repairing",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_verify_failed_state",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IncRepairAdminTest_RestartInjected",
+      "testMethod": "testManualSessionForceCancel",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_check_no_sessions",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_make_fake_session",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_await_repairing_state",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cancel_command",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_still_repairing",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_verify_failed_state",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IncRepairCoordinatorErrorTest_RestartInjected",
+      "testMethod": "errorTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_repair",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_verify_finalized",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_get_parent_id",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_fail_session",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IncRepairTruncationTest_RestartInjected",
+      "testMethod": "testTruncateDuringIncRepair",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_initial_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_initial_repair",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_node2_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node2_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_truncate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_final_repair_preview",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IndexDroppingTest_RestartInjected",
+      "testMethod": "testIndexDropping",
+      "restartPoints": [
+        {
+          "position": "after_keyspace_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_index_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_index_built",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_truncate",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_index",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "before_restart",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_restart",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionEnforcementTest_RestartInjected",
+      "testMethod": "testInboundConnectionsAreRejectedWhenAuthFails",
+      "restartPoints": [
+        {
+          "position": "after_open_connections",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_auth_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionEnforcementTest_RestartInjected",
+      "testMethod": "testOutboundConnectionsAreRejectedWhenAuthFails",
+      "restartPoints": [
+        {
+          "position": "after_open_connections",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_auth_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionEnforcementTest_RestartInjected",
+      "testMethod": "testOutboundConnectionsAreInterruptedWhenAuthFails",
+      "restartPoints": [
+        {
+          "position": "after_open_connections",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_logs_watch",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionEnforcementTest_RestartInjected",
+      "testMethod": "testConnectionsAreAcceptedWhenAuthSucceds",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_open_connections",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionEnforcementTest_RestartInjected",
+      "testMethod": "testAuthenticationWithCertificateAuthenticator",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_open_connections",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionEnforcementTest_RestartInjected",
+      "testMethod": "testConnectionsAreRejectedWithInvalidConfig",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_connection_attempt",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_instance1_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_instance2_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionEnforcementTest_RestartInjected",
+      "testMethod": "testConnectionsAreAcceptedWithValidConfig",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_open_connections",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionOptionsTest_RestartInjected",
+      "testMethod": "optionalTlsConnectionDisabledWithoutKeystoreTest",
+      "restartPoints": [
+        {
+          "position": "after_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_connection_test",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionOptionsTest_RestartInjected",
+      "testMethod": "optionalTlsConnectionAllowedWithKeystoreTest",
+      "restartPoints": [
+        {
+          "position": "after_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_connection_test",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeEncryptionOptionsTest_RestartInjected",
+      "testMethod": "allInternodeEncryptionEstablishedTest",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_verification",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeErrorExclusionTest_RestartInjected",
+      "testMethod": "ignoreExcludedInternodeErrors",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_exception_trigger",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.InternodeErrorExclusionTest_RestartInjected",
+      "testMethod": "testNoSpammingInvalidLegacyProtocolMagicException",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start_nospam",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_first_exception",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_second_exception",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IPMembershipTest_RestartInjected",
+      "testMethod": "sameIPFailWithoutReplace",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_stress_write",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.IPMembershipTest_RestartInjected",
+      "testMethod": "startupNewIP",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_stress_write",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_ip_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node_startup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_ring_join",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.JVMDTestTest_RestartInjected",
+      "testMethod": "insertTimestampTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_inserts",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.JVMDTestTest_RestartInjected",
+      "testMethod": "instanceLogs",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_exception_trigger",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.JVMDTestTest_RestartInjected",
+      "testMethod": "jvmArgumentLoggingTest",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.JVMDTestTest_RestartInjected",
+      "testMethod": "nonSharedConfigClassTest",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.JVMDTestTest_RestartInjected",
+      "testMethod": "modifySchemaWithStoppedNode",
+      "restartPoints": [
+        {
+          "position": "after_first_schema_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_node2_shutdown",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_second_schema_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_both_nodes_restart",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_third_schema_change",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.JVMStabilityInspectorThrowableTest_RestartInjected",
+      "testMethod": "testAbstractLocalAwareExecutorServiceOnPolicies",
+      "restartPoints": [
+        {
+          "position": "after_daemon_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_corruption",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        },
+        {
+          "position": "after_failed_query",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LargeColumnTest_RestartInjected",
+      "testMethod": "test",
+      "restartPoints": [
+        {
+          "position": "after_cluster_start",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_inserts",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LargeMessageTest_RestartInjected",
+      "testMethod": "testLargeMessage",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_large_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LegacyCASTest_RestartInjected",
+      "testMethod": "simpleUpdate",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_insert",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_serial_select",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_failed_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_successful_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LegacyCASTest_RestartInjected",
+      "testMethod": "incompletePrepare",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_prepare",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LegacyCASTest_RestartInjected",
+      "testMethod": "incompletePropose",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_propose",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LegacyCASTest_RestartInjected",
+      "testMethod": "incompleteCommit",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_commit",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_cas_update",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LegacyCASTest_RestartInjected",
+      "testMethod": "testRepairIncompletePropose",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_filter_setup_iteration_1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_propose_iteration_1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair_iteration_1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_filter_setup_iteration_2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_propose_iteration_2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair_iteration_2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_filter_setup_iteration_3",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_propose_iteration_3",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair_iteration_3",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LegacyCASTest_RestartInjected",
+      "testMethod": "testRepairIncompleteCommit",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_filter_setup_iteration_1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_commit_iteration_1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair_iteration_1",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_filter_setup_iteration_2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_commit_iteration_2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair_iteration_2",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_drop_filter_setup_iteration_3",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_incomplete_commit_iteration_3",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_paxos_repair_iteration_3",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LegacyCASTest_RestartInjected",
+      "testMethod": "testAbortedRangeMovement",
+      "restartPoints": [
+        {
+          "position": "after_keyspace_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_gossip_ring_manipulation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_first_cas_operation",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_abort_node3_start_node4",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_second_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.LeveledCompactionTaskTest_RestartInjected",
+      "testMethod": "testBuildCompactionCandidatesForAvailableDiskSpace",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_data_insertion",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_flush",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_exception_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.MessageFiltersTest_RestartInjected",
+      "testMethod": "testFilters",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_timeout_tests",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_reset",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_range_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_read_tests",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.MessageFiltersTest_RestartInjected",
+      "testMethod": "testMessageMatching",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup_inbound",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_queries_inbound",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_filter_setup_outbound",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_queries_outbound",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.MessageFiltersTest_RestartInjected",
+      "testMethod": "outboundBeforeInbound",
+      "restartPoints": [
+        {
+          "position": "after_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_message_sent",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_await",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.MessageFiltersTest_RestartInjected",
+      "testMethod": "hintSerializationTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_write_failure",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_hint_filter_setup",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_table_drop",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    },
+    {
+      "testClass": "org.apache.cassandra.distributed.test.MessageForwardingTest_RestartInjected",
+      "testMethod": "mutationsForwardedToAllReplicasTest",
+      "restartPoints": [
+        {
+          "position": "after_table_create",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_inserts_complete",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH",
+            "DELAYED_CRASH"
+          ]
+        },
+        {
+          "position": "after_tracing_sync",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_trace_retrieval",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        },
+        {
+          "position": "after_trace_processing",
+          "targets": [
+            "node"
+          ],
+          "modes": [
+            "GRACEFUL",
+            "CRASH"
+          ]
+        }
+      ]
+    }
+  ]
+}
