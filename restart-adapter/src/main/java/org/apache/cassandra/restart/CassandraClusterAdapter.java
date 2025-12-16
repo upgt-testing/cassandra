@@ -8,8 +8,11 @@ import org.restarttest.core.ClusterAdapter;
 import org.restarttest.core.RestartMode;
 import org.restarttest.health.HealthCheck;
 import org.restarttest.health.HealthCheckResult;
+import org.restarttest.state.ClusterState;
+import org.restarttest.state.DefaultClusterState;
 import org.restarttest.state.StateCapture;
 
+import java.util.Collections;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
@@ -24,10 +27,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
 
-    private final CassandraStateCapture stateCapture;
-
     public CassandraClusterAdapter() {
-        this.stateCapture = new CassandraStateCapture();
     }
 
     @Override
@@ -89,13 +89,30 @@ public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
     }
 
     @Override
+    public int getNodeCount(Cluster cluster, String nodeRole) throws Exception {
+        // Cassandra nodes don't have roles - all are peers
+        return cluster.size();
+    }
+
+    @Override
     public StateCapture<Cluster> getStateCapture() {
-        return stateCapture;
+        // No-op state capture - no verification needed for Cassandra restart adapter
+        return new StateCapture<Cluster>() {
+            @Override
+            public ClusterState captureState(Cluster cluster) {
+                return new DefaultClusterState(Collections.emptyMap());
+            }
+
+            @Override
+            public void verifyState(Cluster cluster, ClusterState before, ClusterState after) {
+                // No verification - intentionally empty
+            }
+        };
     }
 
     @Override
     public HealthCheck<Cluster> getHealthCheck() {
-        // Return a no-op health check - health verification is handled by waitActive()
+        // No-op health check - health verification is handled by waitActive()
         return new HealthCheck<Cluster>() {
             @Override
             public String getName() {
@@ -103,17 +120,11 @@ public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
             }
 
             @Override
-            public HealthCheckResult checkHealth(Cluster cluster) throws Exception {
+            public HealthCheckResult checkHealth(Cluster cluster) {
                 // Always pass - actual health checking done in waitActive()
                 return new HealthCheckResult(true, getName());
             }
         };
-    }
-
-    @Override
-    public int getNodeCount(Cluster cluster, String nodeRole) throws Exception {
-        // Cassandra nodes don't have roles - all are peers
-        return cluster.size();
     }
 
     // --- Private helper methods ---

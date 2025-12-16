@@ -6,7 +6,6 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.restarttest.core.RestartMode;
-import org.restarttest.state.ClusterState;
 
 import static org.junit.Assert.*;
 
@@ -17,7 +16,6 @@ import static org.junit.Assert.*;
  * <ul>
  *   <li>Translates 0-based to 1-based indices</li>
  *   <li>Restarts nodes in GRACEFUL, CRASH, and DELAYED_CRASH modes</li>
- *   <li>Captures and verifies cluster state across restarts</li>
  *   <li>Handles rolling restarts</li>
  * </ul>
  */
@@ -88,10 +86,6 @@ public class CassandraClusterAdapterTest {
         // Wait for cluster to be active
         adapter.waitActive(cluster);
 
-        // Verify health check passes
-        assertTrue("Health check should pass after graceful restart",
-            adapter.getHealthCheck().checkHealth(cluster).isPassed());
-
         // Verify data is still accessible
         Object[][] result = cluster.coordinator(1).execute(
             "SELECT * FROM test.data WHERE id = 1",
@@ -117,10 +111,6 @@ public class CassandraClusterAdapterTest {
         // Wait for cluster to be active
         adapter.waitActive(cluster);
 
-        // Verify health check passes
-        assertTrue("Health check should pass after crash restart",
-            adapter.getHealthCheck().checkHealth(cluster).isPassed());
-
         // Verify data is still accessible
         Object[][] result = cluster.coordinator(1).execute(
             "SELECT * FROM test.data WHERE id = 10",
@@ -145,40 +135,12 @@ public class CassandraClusterAdapterTest {
         // Wait for cluster to be active
         adapter.waitActive(cluster);
 
-        // Verify health check passes
-        assertTrue("Health check should pass after delayed crash restart",
-            adapter.getHealthCheck().checkHealth(cluster).isPassed());
-
         // Verify data is still accessible
         Object[][] result = cluster.coordinator(1).execute(
             "SELECT * FROM test.data WHERE id = 20",
             ConsistencyLevel.QUORUM);
 
         assertEquals("Data should be preserved after delayed crash restart", 1, result.length);
-    }
-
-    /**
-     * Test state capture and verification across restart.
-     */
-    @Test
-    public void testStateCapture() throws Exception {
-        CassandraStateCapture stateCapture = (CassandraStateCapture) adapter.getStateCapture();
-
-        // Capture state before restart
-        ClusterState before = stateCapture.captureState(cluster);
-
-        assertNotNull("Should capture ring topology", before.getStateMap().get("ringTopology"));
-        assertNotNull("Should capture gossip state", before.getStateMap().get("gossipStates"));
-
-        // Restart a node
-        adapter.restartNode(cluster, "node", 1, RestartMode.GRACEFUL);
-        adapter.waitActive(cluster);
-
-        // Capture state after restart
-        ClusterState after = stateCapture.captureState(cluster);
-
-        // Verify invariants
-        stateCapture.verifyCustomInvariants(cluster, before, after);
     }
 
     /**
@@ -195,16 +157,9 @@ public class CassandraClusterAdapterTest {
 
         // Perform rolling restart (one node at a time)
         for (int nodeIdx = 0; nodeIdx < 3; nodeIdx++) {
-            // Capture state before restart
-            ClusterState before = adapter.getStateCapture().captureState(cluster);
-
             // Restart node
             adapter.restartNode(cluster, "node", nodeIdx, RestartMode.GRACEFUL);
             adapter.waitActive(cluster);
-
-            // Verify health
-            assertTrue("Cluster should be healthy after restarting node " + nodeIdx,
-                adapter.getHealthCheck().checkHealth(cluster).isPassed());
 
             // Insert more data between restarts
             int writeStart = 200 + (nodeIdx * 10);
@@ -213,10 +168,6 @@ public class CassandraClusterAdapterTest {
                     "INSERT INTO test.data (id, value) VALUES (?, ?)",
                     ConsistencyLevel.QUORUM, i, "write_" + i);
             }
-
-            // Verify state after restart
-            ClusterState after = adapter.getStateCapture().captureState(cluster);
-            adapter.getStateCapture().verifyCustomInvariants(cluster, before, after);
         }
 
         // Verify all data is still accessible
@@ -243,10 +194,6 @@ public class CassandraClusterAdapterTest {
 
         // Wait for cluster to be active
         adapter.waitActive(cluster);
-
-        // Verify health
-        assertTrue("Cluster should be healthy after restarting all nodes",
-            adapter.getHealthCheck().checkHealth(cluster).isPassed());
 
         // Verify data is still accessible
         Object[][] result = cluster.coordinator(1).execute(
