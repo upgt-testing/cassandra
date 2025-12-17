@@ -1,0 +1,1525 @@
+{
+  "failure_groups": [
+    {
+      "group_id": 1,
+      "generalized_stacktrace": "java.util.concurrent.RejectedExecutionException\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorBase.lambda$static$0(ThreadPoolExecutorBase.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.addTask(ThreadPoolExecutorPlus.java)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.submit(ThreadPoolExecutorPlus.java)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.submit(ThreadPoolExecutorPlus.java)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$async$6(IsolatedExecutor.java)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$sync$7(IsolatedExecutor.java)\n\tat org.apache.cassandra.distributed.impl.Coordinator.executeWithResult(Coordinator.java)\n\tat org.apache.cassandra.distributed.api.ICoordinator.execute(ICoordinator.java)",
+      "raw_stacktrace_sample": "java.util.concurrent.RejectedExecutionException: isolatedExecutor has shut down\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorBase.lambda$static$0(ThreadPoolExecutorBase.java:49)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.addTask(ThreadPoolExecutorPlus.java:50)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.submit(ThreadPoolExecutorPlus.java:81)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.submit(ThreadPoolExecutorPlus.java:33)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$async$6(IsolatedExecutor.java:150)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$sync$7(IsolatedExecutor.java:151)\n\tat org.apache.cassandra.distributed.impl.Coordinator.executeWithResult(Coordinator.java:61)\n\tat org.apache.cassandra.distributed.api.ICoordinator.execute(ICoordinator.java:32)\n\tat org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected.execute(GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected.java:591)\n\tat org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected.testCompositeClusteringKey(GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected.java:575)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testCompositeClusteringKey",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-586512fa",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-01/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testCompositeClusteringKey",
+          "position": "after_first_insert",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "057-30c72039",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-01/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSizeFrozen",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "062-b50248ed",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSizeFrozen",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "062-0635f947",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-12/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSizeFrozen",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "062-5d487336",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testCompositePartitionKey",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "062-be247d4c",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-14/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testCompositePartitionKey",
+          "position": "after_first_insert",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "063-42ca6f9e",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-14/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSizeAfterCompaction",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "045-add9503b",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-20/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSizeAfterCompaction",
+          "position": "after_first_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "046-a1562c04",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-20/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSizeAfterCompaction",
+          "position": "after_warning_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "047-5b04832e",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-20/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSizeAfterCompaction",
+          "position": "after_failed_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "048-e00adfb8",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-20/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSize",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "054-8147b6c3",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-27/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSize",
+          "position": "after_initial_inserts",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "055-6a96ed8f",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-27/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSize",
+          "position": "after_warning_inserts",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-817257cf",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-27/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSizeWithUpdates",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "054-245fa39a",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-28/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSizeWithUpdates",
+          "position": "after_initial_updates",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "055-c622e98b",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-28/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSizeWithUpdates",
+          "position": "after_warning_updates",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-76cdfbca",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-28/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSizeAfterCompaction",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "054-6e046c74",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSizeAfterCompaction",
+          "position": "after_first_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "055-dd3a7cb2",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testSetSizeAfterCompaction",
+          "position": "after_warning_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-75728bc1",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSize",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "054-98113836",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-30/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSize",
+          "position": "after_initial_inserts",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "055-19c46132",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-30/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSize",
+          "position": "after_warning_inserts",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-e61efb10",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-30/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CountersTest_RestartInjected",
+          "testMethod": "testUpdateCounter",
+          "position": "after_counter_increment",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "031-e216c503",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-31/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSizeWithUpdates",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "054-8bffba75",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-31/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSizeWithUpdates",
+          "position": "after_initial_updates",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "055-439ad979",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-31/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testListSizeWithUpdates",
+          "position": "after_warning_updates",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-221c8834",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-31/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CountersTest_RestartInjected",
+          "testMethod": "testUpdateCounterWithDroppedCompactStorage",
+          "position": "after_counter_increment",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "031-82c8782d",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-32/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSize",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "054-709ab528",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-32/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSize",
+          "position": "after_initial_inserts",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "055-d370cb35",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-32/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSize",
+          "position": "after_warning_inserts",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-959a66df",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-32/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSizeWithUpdates",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "054-496085ef",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-33/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSizeWithUpdates",
+          "position": "after_initial_updates",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "055-a555d621",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-33/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSizeWithUpdates",
+          "position": "after_warning_updates",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-7c1af99e",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-33/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSizeAfterCompaction",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "054-f671885a",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSizeAfterCompaction",
+          "position": "after_first_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "055-f9f6b54b",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.guardrails.GuardrailItemsPerCollectionOnSSTableWriteTest_RestartInjected",
+          "testMethod": "testMapSizeAfterCompaction",
+          "position": "after_warning_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-f021b117",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metrics.HintsServiceMetricsTest_RestartInjected",
+          "testMethod": "testHintsServiceMetrics",
+          "position": "after_first_half_writes",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "022-7913c69e",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-38/cassandra"
+        }
+      ],
+      "execution_count": 38
+    },
+    {
+      "group_id": 2,
+      "generalized_stacktrace": "Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException\n\tat com.datastax.driver.core.RequestHandler.reportNoMoreHosts(RequestHandler.java)\n\tat com.datastax.driver.core.RequestHandler.access$1200(RequestHandler.java)\n\tat com.datastax.driver.core.RequestHandler$SpeculativeExecution.findNextHostAndQuery(RequestHandler.java)\n\tat com.datastax.driver.core.RequestHandler.startNewExecution(RequestHandler.java)\n\tat com.datastax.driver.core.RequestHandler.sendRequest(RequestHandler.java)\n\tat com.datastax.driver.core.SessionManager.execute(SessionManager.java)\n\tat com.datastax.driver.core.SessionManager.executeAsync(SessionManager.java)",
+      "raw_stacktrace_sample": "com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)\n\tat com.datastax.driver.core.exceptions.NoHostAvailableException.copy(NoHostAvailableException.java:85)\n\tat com.datastax.driver.core.exceptions.NoHostAvailableException.copy(NoHostAvailableException.java:39)\n\tat com.datastax.driver.core.DriverThrowables.propagateCause(DriverThrowables.java:37)\n\tat com.datastax.driver.core.DefaultResultSetFuture.getUninterruptibly(DefaultResultSetFuture.java:295)\n\tat com.datastax.driver.core.AbstractSession.execute(AbstractSession.java:60)\n\tat com.datastax.driver.core.AbstractSession.execute(AbstractSession.java:41)\n\tat org.apache.cassandra.distributed.test.DisableBinaryTest_RestartInjected.testDisallowsNewRequests(DisableBinaryTest_RestartInjected.java:193)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)\n\tat com.datastax.driver.core.RequestHandler.reportNoMoreHosts(RequestHandler.java:285)\n\tat com.datastax.driver.core.RequestHandler.access$1200(RequestHandler.java:63)\n\tat com.datastax.driver.core.RequestHandler$SpeculativeExecution.findNextHostAndQuery(RequestHandler.java:377)\n\tat com.datastax.driver.core.RequestHandler.startNewExecution(RequestHandler.java:141)\n\tat com.datastax.driver.core.RequestHandler.sendRequest(RequestHandler.java:123)\n\tat com.datastax.driver.core.SessionManager.execute(SessionManager.java:707)\n\tat com.datastax.driver.core.SessionManager.executeAsync(SessionManager.java:144)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.DisableBinaryTest_RestartInjected",
+          "testMethod": "testDisallowsNewRequests",
+          "position": "after_transport_stop",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "051-a478f20a",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-03/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "applyClientBackpressure",
+          "position": "after_initial_query",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "030-535dae58",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-09/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "applyClientBackpressure",
+          "position": "after_enable_slow_select",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "031-14c36077",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-09/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "testFinishInProgressQueries",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "029-78d78f76",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "testFinishInProgressQueries",
+          "position": "after_initial_query",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "030-a2863722",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "testFinishInProgressQueries",
+          "position": "after_enable_slow_select",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "031-fcf623d1",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareOldBehaviourTest_RestartInjected",
+          "testMethod": "testReprepareUsingOldBehavior",
+          "position": "after_prepare",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "042-54edf3bd",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareOldBehaviourTest_RestartInjected",
+          "testMethod": "testReprepareUsingOldBehavior",
+          "position": "after_first_execute",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "043-08622a26",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "clientBackpressureDisabled",
+          "position": "after_initial_query",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "030-b0b51246",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "clientBackpressureDisabled",
+          "position": "after_enable_slow_select",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "031-1d8502a4",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest_RestartInjected",
+          "testMethod": "testUseWithMultipleKeyspaces",
+          "position": "after_schema_setup",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "014-a156279f",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest_RestartInjected",
+          "testMethod": "testUseWithMultipleKeyspaces",
+          "position": "after_prepare_ks1",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "015-f4155340",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest_RestartInjected",
+          "testMethod": "testUseWithMultipleKeyspaces",
+          "position": "after_insert_ks2",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "016-075e34ef",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest_RestartInjected",
+          "testMethod": "testUseWithMultipleKeyspaces",
+          "position": "after_query_ks1",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "017-458b8656",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest_RestartInjected",
+          "testMethod": "testUseWithMultipleKeyspaces",
+          "position": "after_prepare_ks2",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "019-030f3b52",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest_RestartInjected",
+          "testMethod": "testUseWithMultipleKeyspaces",
+          "position": "after_query_ks2",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "020-ed008ea6",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareOldBehaviourTest_RestartInjected",
+          "testMethod": "testReprepareMixedVersionWithoutReset",
+          "position": "after_prepare_mixed",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "030-75e619fd",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-16/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareOldBehaviourTest_RestartInjected",
+          "testMethod": "testReprepareMixedVersionWithoutReset",
+          "position": "after_first_execute_mixed",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "031-0dbc7751",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-16/cassandra"
+        }
+      ],
+      "execution_count": 18
+    },
+    {
+      "group_id": 3,
+      "generalized_stacktrace": "java.lang.NullPointerException\n\tat java.base/java.util.UUID.fromString(UUID.java)",
+      "raw_stacktrace_sample": "java.lang.NullPointerException: Cannot invoke \"String.length()\" because \"name\" is null\n\tat java.base/java.util.UUID.fromString(UUID.java:237)\n\tat org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected.doHintReappearData(HintDataReappearingTest_RestartInjected.java:279)\n\tat org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected.demonstrateHintCausesDataReappearanceWriteTimeout(HintDataReappearingTest_RestartInjected.java:90)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearanceWriteTimeout",
+          "position": "after_pause_hints",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "003-6ea8e9de",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearanceWriteTimeout",
+          "position": "after_insert_and_filter_reset",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "004-c3a515f0",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearanceWriteTimeout",
+          "position": "after_first_flush",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "005-d26ee023",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearanceWriteTimeout",
+          "position": "after_delete",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "006-b2e1265e",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearanceWriteTimeout",
+          "position": "after_repair",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "008-ccb3e497",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearanceWriteTimeout",
+          "position": "after_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "2",
+          "executionDir": "010-27dbad70",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearance",
+          "position": "after_pause_hints",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "003-40e24b18",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearance",
+          "position": "after_insert_and_filter_reset",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "004-c0d5cc84",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearance",
+          "position": "after_first_flush",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "005-13bbbf34",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearance",
+          "position": "after_delete",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "006-f9a12a68",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearance",
+          "position": "after_repair",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "008-e1a3fe98",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected",
+          "testMethod": "demonstrateHintCausesDataReappearance",
+          "position": "after_compaction",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "2",
+          "executionDir": "010-fcff91a6",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        }
+      ],
+      "execution_count": 12
+    },
+    {
+      "group_id": 4,
+      "generalized_stacktrace": "Caused by: java.lang.RuntimeException\n\tat org.apache.cassandra.gms.Gossiper.doShadowRound(Gossiper.java)\n\tat org.apache.cassandra.service.StorageService.checkForEndpointCollision(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.prepareToJoin(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$startup$12(Instance.java)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java)",
+      "raw_stacktrace_sample": "org.restarttest.core.RestartException: Restart failed at position after_verification\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:85)\n\tat org.restarttest.api.RestartPointBuilder.execute(RestartPointBuilder.java:172)\n\tat org.apache.cassandra.distributed.test.GossipSettlesTest_RestartInjected.testGossipSettles(GossipSettlesTest_RestartInjected.java:135)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.lang.RuntimeException: Failed to gracefully restart node 2\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.performGracefulRestart(CassandraClusterAdapter.java:156)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:48)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:28)\n\tat org.restarttest.core.RestartExecutor.restartSingleNode(RestartExecutor.java:186)\n\tat org.restarttest.core.RestartExecutor.performRestart(RestartExecutor.java:170)\n\tat org.restarttest.core.RestartExecutor.executeRestart(RestartExecutor.java:112)\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:83)\nCaused by: java.lang.RuntimeException: Unable to gossip with any peers\n\tat org.apache.cassandra.gms.Gossiper.doShadowRound(Gossiper.java:2075)\n\tat org.apache.cassandra.service.StorageService.checkForEndpointCollision(StorageService.java:866)\n\tat org.apache.cassandra.service.StorageService.prepareToJoin(StorageService.java:1181)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java:1017)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java:947)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$startup$12(Instance.java:708)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java:124)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.GossipSettlesTest_RestartInjected",
+          "testMethod": "testGossipSettles",
+          "position": "after_verification",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "052-132c22ff",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-07/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.gossip.GossipShutdownTest_RestartInjected",
+          "testMethod": "emptyStateAndShutdownEvent",
+          "position": "after_filter_setup",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "046-b98f1031",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-17/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintedHandoffAddRemoveNodesTest_RestartInjected",
+          "testMethod": "shouldStreamHintsDuringDecommission",
+          "position": "after_final_decommissions",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "3",
+          "executionDir": "019-868ef345",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-18/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ring.NodeNotInRingTest_RestartInjected",
+          "testMethod": "nodeNotInRingTest",
+          "position": "after_node_removal",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "2",
+          "executionDir": "030-cd6d2ba3",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-20/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.GossipShutdownTest_RestartInjected",
+          "testMethod": "shutdownStayDownTest",
+          "position": "after_filter_setup",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "042-0fa9efae",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-20/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.hostreplacement.HostReplacementTest_RestartInjected",
+          "testMethod": "seedGoesDownBeforeDownHost",
+          "position": "after_node_stop",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "2",
+          "executionDir": "005-ba5ca057",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-24/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.jmx.JMXFeatureTest_RestartInjected",
+          "testMethod": "testShutDownAndRestartInstances",
+          "position": "after_instance_stop",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "004-8c513a8f",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.jmx.JMXFeatureTest_RestartInjected",
+          "testMethod": "testShutDownAndRestartInstances",
+          "position": "after_ring_status_down",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "005-ba3c783f",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.jmx.JMXFeatureTest_RestartInjected",
+          "testMethod": "testShutDownAndRestartInstances",
+          "position": "after_nodetool_status_down",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "006-1d8ee072",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.gossip.GossipShutdownTest_RestartInjected",
+          "testMethod": "emptyStateAndHostJoin",
+          "position": "after_filter_setup_host",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "021-042463bd",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        }
+      ],
+      "execution_count": 10
+    },
+    {
+      "group_id": 5,
+      "generalized_stacktrace": "Caused by: java.lang.NullPointerException\n\tat org.apache.cassandra.service.GCInspector.<init>(GCInspector.java)\n\tat org.apache.cassandra.distributed.mock.nodetool.InternalNodeProbe.connect(InternalNodeProbe.java)\n\tat org.apache.cassandra.distributed.mock.nodetool.InternalNodeProbe.<init>(InternalNodeProbe.java)\n\tat org.apache.cassandra.distributed.impl.Instance$DTestNodeTool.<init>(Instance.java)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$nodetoolResult$51(Instance.java)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java)",
+      "raw_stacktrace_sample": "org.restarttest.core.RestartException: Restart failed at position after_load_system_tables\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:85)\n\tat org.restarttest.api.RestartPointBuilder.execute(RestartPointBuilder.java:172)\n\tat org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected.systemTables(TableMetricTest_RestartInjected.java:83)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.lang.NullPointerException: Cannot invoke \"java.util.Set.iterator()\" because the return value of \"org.apache.cassandra.utils.MBeanWrapper.queryNames(javax.management.ObjectName, javax.management.QueryExp)\" is null\n\tat org.apache.cassandra.service.GCInspector.<init>(GCInspector.java:145)\n\tat org.apache.cassandra.distributed.mock.nodetool.InternalNodeProbe.connect(InternalNodeProbe.java:79)\n\tat org.apache.cassandra.distributed.mock.nodetool.InternalNodeProbe.<init>(InternalNodeProbe.java:58)\n\tat org.apache.cassandra.distributed.impl.Instance$DTestNodeTool.<init>(Instance.java:1079)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$nodetoolResult$51(Instance.java:986)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "systemTables",
+          "position": "after_load_system_tables",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "067-b1422257",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-10/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "userTables",
+          "position": "after_load_system_tables",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "012-30bec6a1",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "userTables",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "013-334986c3",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "userTables",
+          "position": "after_alter_comment",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "014-f7023898",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "userTables",
+          "position": "after_alter_add_column",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "015-74988ad6",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "userTables",
+          "position": "after_alter_rename",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "016-5db94061",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "userTables",
+          "position": "after_alter_drop_column",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "017-4e7b5882",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "userTables",
+          "position": "after_drop_table",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "018-42dc3a99",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected",
+          "testMethod": "userTables",
+          "position": "after_drop_keyspace",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "019-5b7999e2",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-29/cassandra"
+        }
+      ],
+      "execution_count": 9
+    },
+    {
+      "group_id": 6,
+      "generalized_stacktrace": "Caused by: org.apache.cassandra.exceptions.ConfigurationException\n\tat org.apache.cassandra.service.StorageService.prepareToJoin(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$startup$12(Instance.java)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java)",
+      "raw_stacktrace_sample": "org.restarttest.core.RestartException: Restart failed at position after_successful_decommission\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:85)\n\tat org.restarttest.api.RestartPointBuilder.execute(RestartPointBuilder.java:172)\n\tat org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected.testDecommissionAfterNodeRestart(DecommissionTest_RestartInjected.java:208)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.lang.RuntimeException: Failed to gracefully restart node 1\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.performGracefulRestart(CassandraClusterAdapter.java:156)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:48)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:28)\n\tat org.restarttest.core.RestartExecutor.restartSingleNode(RestartExecutor.java:186)\n\tat org.restarttest.core.RestartExecutor.performRestart(RestartExecutor.java:170)\n\tat org.restarttest.core.RestartExecutor.executeRestart(RestartExecutor.java:112)\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:83)\nCaused by: org.apache.cassandra.exceptions.ConfigurationException: This node was decommissioned and will not rejoin the ring unless -Dcassandra.override_decommission=true has been set, or all existing data is removed and the node is bootstrapped again\n\tat org.apache.cassandra.service.StorageService.prepareToJoin(StorageService.java:1144)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java:1017)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java:947)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$startup$12(Instance.java:708)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java:124)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected",
+          "testMethod": "testDecommissionAfterNodeRestart",
+          "position": "after_successful_decommission",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "045-76bbfef7",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-02/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintedHandoffAddRemoveNodesTest_RestartInjected",
+          "testMethod": "shouldAvoidHintTransferOnDecommission",
+          "position": "after_decommission",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "043-da6c8e70",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-21/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.streaming.LCSStreamingKeepLevelTest_RestartInjected",
+          "testMethod": "testDecom",
+          "position": "after_decommission",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "3",
+          "executionDir": "065-99f590ae",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-28/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected",
+          "testMethod": "testDecommission",
+          "position": "after_decommission_tests",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "064-dabc4255",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-38/cassandra"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "group_id": 7,
+      "generalized_stacktrace": "org.apache.cassandra.exceptions.CasWriteTimeoutException\n\tat org.apache.cassandra.service.paxos.Paxos$MaybeFailure.markAndThrowAsTimeoutOrFailure(Paxos.java)\n\tat org.apache.cassandra.service.paxos.Paxos.begin(Paxos.java)\n\tat org.apache.cassandra.service.paxos.Paxos.cas(Paxos.java)\n\tat org.apache.cassandra.service.paxos.Paxos.cas(Paxos.java)\n\tat org.apache.cassandra.service.StorageProxy.cas(StorageProxy.java)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.executeWithCondition(ModificationStatement.java)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.execute(ModificationStatement.java)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java)\n\tat org.apache.cassandra.distributed.impl.Coordinator.unsafeExecuteInternal(Coordinator.java)\n\tat org.apache.cassandra.distributed.impl.Coordinator.lambda$executeWithResult$0(Coordinator.java)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java)\n\tat java.base/java.lang.Thread.run(Thread.java)",
+      "raw_stacktrace_sample": "org.apache.cassandra.exceptions.CasWriteTimeoutException: CAS operation timed out: received 1 of 2 required responses after 0 contention retries\n\tat org.apache.cassandra.service.paxos.Paxos$MaybeFailure.markAndThrowAsTimeoutOrFailure(Paxos.java:565)\n\tat org.apache.cassandra.service.paxos.Paxos.begin(Paxos.java:1072)\n\tat org.apache.cassandra.service.paxos.Paxos.cas(Paxos.java:677)\n\tat org.apache.cassandra.service.paxos.Paxos.cas(Paxos.java:636)\n\tat org.apache.cassandra.service.StorageProxy.cas(StorageProxy.java:327)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.executeWithCondition(ModificationStatement.java:542)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.execute(ModificationStatement.java:501)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java:67)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java:47)\n\tat org.apache.cassandra.distributed.impl.Coordinator.unsafeExecuteInternal(Coordinator.java:94)\n\tat org.apache.cassandra.distributed.impl.Coordinator.lambda$executeWithResult$0(Coordinator.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+          "testMethod": "testSucccessfulWriteDuringRangeMovementFollowedByRead",
+          "position": "after_bootstrap_setup",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "037-18a19bb5",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-05/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+          "testMethod": "testSuccessfulWriteDuringRangeMovementFollowedByConflicting",
+          "position": "after_bootstrap_setup",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "037-f70c4759",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-06/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+          "testMethod": "testIncompleteWriteFollowedBySuccessfulWriteWithStaleRingDuringRangeMovementFollowedByRead",
+          "position": "after_bootstrap_setup",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "029-ff964b52",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-27/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CASTest_RestartInjected",
+          "testMethod": "testIncompleteWriteFollowedBySuccessfulWriteWithStaleRingDuringRangeMovementFollowedByWrite",
+          "position": "after_bootstrap_setup",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "029-904dd96f",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-28/cassandra"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "group_id": 8,
+      "generalized_stacktrace": "Caused by: java.util.concurrent.TimeoutException\n\tat org.apache.cassandra.utils.ExecutorUtils.awaitTerminationUntil(ExecutorUtils.java)\n\tat org.apache.cassandra.utils.ExecutorUtils.awaitTermination(ExecutorUtils.java)\n\tat org.apache.cassandra.concurrent.Stage.shutdownAndWait(Stage.java)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$shutdown$42(Instance.java)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$parallelRun$52(Instance.java)",
+      "raw_stacktrace_sample": "org.restarttest.core.RestartException: Restart failed at position after_first_insert_started\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:85)\n\tat org.restarttest.api.RestartPointBuilder.execute(RestartPointBuilder.java:172)\n\tat org.apache.cassandra.distributed.test.CASContentionTest_RestartInjected.testDynamicContentionTracing(CASContentionTest_RestartInjected.java:118)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.lang.RuntimeException: Failed to gracefully restart node 1\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.performGracefulRestart(CassandraClusterAdapter.java:156)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:48)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:28)\n\tat org.restarttest.core.RestartExecutor.restartSingleNode(RestartExecutor.java:186)\n\tat org.restarttest.core.RestartExecutor.performRestart(RestartExecutor.java:170)\n\tat org.restarttest.core.RestartExecutor.executeRestart(RestartExecutor.java:112)\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:83)\nCaused by: java.lang.RuntimeException: java.util.concurrent.TimeoutException: org.apache.cassandra.concurrent.SEPExecutor@6ca42584 did not terminate on time\n\tat org.apache.cassandra.utils.Throwables.maybeFail(Throwables.java:79)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$shutdown$48(Instance.java:945)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$async$10(IsolatedExecutor.java:156)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java:124)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\nCaused by: java.util.concurrent.TimeoutException: org.apache.cassandra.concurrent.SEPExecutor@6ca42584 did not terminate on time\n\tat org.apache.cassandra.utils.ExecutorUtils.awaitTerminationUntil(ExecutorUtils.java:111)\n\tat org.apache.cassandra.utils.ExecutorUtils.awaitTermination(ExecutorUtils.java:100)\n\tat org.apache.cassandra.concurrent.Stage.shutdownAndWait(Stage.java:193)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$shutdown$42(Instance.java:915)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$parallelRun$52(Instance.java:1162)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CASContentionTest_RestartInjected",
+          "testMethod": "testDynamicContentionTracing",
+          "position": "after_first_insert_started",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "005-62d6417a",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-25/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CASContentionTest_RestartInjected",
+          "testMethod": "testDynamicContentionTracing",
+          "position": "after_second_insert",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "006-e95f24a7",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-25/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.QueriesTableTest_RestartInjected",
+          "testMethod": "shouldExposeReadsAndWrites",
+          "position": "after_async_queries",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "051-9491c198",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-33/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.QueriesTableTest_RestartInjected",
+          "testMethod": "shouldExposeCAS",
+          "position": "cas_after_async_update",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "051-2c8171fc",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "group_id": 9,
+      "generalized_stacktrace": "Caused by: java.lang.NullPointerException\n\tat java.base/java.util.Objects.requireNonNull(Objects.java)\n\tat org.apache.cassandra.distributed.shared.ClusterUtils.parseGossipInfo(ClusterUtils.java)\n\tat org.apache.cassandra.distributed.shared.ClusterUtils.gossipInfo(ClusterUtils.java)\n\tat org.apache.cassandra.distributed.shared.ClusterUtils.awaitGossip(ClusterUtils.java)\n\tat org.apache.cassandra.distributed.shared.ClusterUtils.awaitGossipSchemaMatch(ClusterUtils.java)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.waitActive(CassandraClusterAdapter.java)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.waitActive(CassandraClusterAdapter.java)\n\tat org.restarttest.core.RestartExecutor.executeRestart(RestartExecutor.java)\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java)",
+      "raw_stacktrace_sample": "org.restarttest.core.RestartException: Restart failed at position after_getters_test\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:85)\n\tat org.restarttest.api.RestartPointBuilder.execute(RestartPointBuilder.java:172)\n\tat org.apache.cassandra.distributed.test.jmx.JMXGetterCheckTest_RestartInjected.testGetters(JMXGetterCheckTest_RestartInjected.java:86)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.lang.NullPointerException\n\tat java.base/java.util.Objects.requireNonNull(Objects.java:209)\n\tat org.apache.cassandra.distributed.shared.ClusterUtils.parseGossipInfo(ClusterUtils.java:691)\n\tat org.apache.cassandra.distributed.shared.ClusterUtils.gossipInfo(ClusterUtils.java:655)\n\tat org.apache.cassandra.distributed.shared.ClusterUtils.awaitGossip(ClusterUtils.java:554)\n\tat org.apache.cassandra.distributed.shared.ClusterUtils.awaitGossipSchemaMatch(ClusterUtils.java:600)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.waitActive(CassandraClusterAdapter.java:85)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.waitActive(CassandraClusterAdapter.java:28)\n\tat org.restarttest.core.RestartExecutor.executeRestart(RestartExecutor.java:116)\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:83)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.jmx.JMXGetterCheckTest_RestartInjected",
+          "testMethod": "testGetters",
+          "position": "after_getters_test",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "059-acaf07f8",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-02/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.jmx.JMXFeatureTest_RestartInjected",
+          "testMethod": "testShutDownAndRestartInstances",
+          "position": "after_all_getters_test",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "010-901071ff",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-34/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.jmx.JMXFeatureTest_RestartInjected",
+          "testMethod": "testMultipleNetworkInterfacesProvisioning",
+          "position": "after_all_getters_test",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-48962736",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-38/cassandra"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "group_id": 10,
+      "generalized_stacktrace": "Caused by: java.lang.IllegalStateException\n\tat org.apache.cassandra.distributed.impl.AbstractCluster$Wrapper.shutdown(AbstractCluster.java)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.performGracefulRestart(CassandraClusterAdapter.java)",
+      "raw_stacktrace_sample": "org.restarttest.core.RestartException: Restart failed at position after_stop_all_2\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:85)\n\tat org.restarttest.api.RestartPointBuilder.execute(RestartPointBuilder.java:172)\n\tat org.apache.cassandra.distributed.test.hostreplacement.HostReplacementOfDownedClusterTest_RestartInjected.hostReplacementOfDeadNodeAndOtherNodeStartsAfter(HostReplacementOfDownedClusterTest_RestartInjected.java:229)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.lang.RuntimeException: Failed to gracefully restart node 1\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.performGracefulRestart(CassandraClusterAdapter.java:156)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:48)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:28)\n\tat org.restarttest.core.RestartExecutor.restartSingleNode(RestartExecutor.java:186)\n\tat org.restarttest.core.RestartExecutor.performRestart(RestartExecutor.java:170)\n\tat org.restarttest.core.RestartExecutor.executeRestart(RestartExecutor.java:112)\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:83)\nCaused by: java.lang.IllegalStateException: Instance is not running, so can not be shutdown\n\tat org.apache.cassandra.distributed.impl.AbstractCluster$Wrapper.shutdown(AbstractCluster.java:449)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.performGracefulRestart(CassandraClusterAdapter.java:140)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.hostreplacement.HostReplacementOfDownedClusterTest_RestartInjected",
+          "testMethod": "hostReplacementOfDeadNodeAndOtherNodeStartsAfter",
+          "position": "after_stop_all_2",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "004-211b7df2",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-07/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.RestartTest_RestartInjected",
+          "testMethod": "test",
+          "position": "after_both_nodes_shutdown",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "031-6043a934",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-17/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.hostreplacement.HostReplacementOfDownedClusterTest_RestartInjected",
+          "testMethod": "hostReplacementOfDeadNode",
+          "position": "after_stop_all",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "004-b9fd3ca8",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-33/cassandra"
+        }
+      ],
+      "execution_count": 3
+    },
+    {
+      "group_id": 11,
+      "generalized_stacktrace": "java.lang.RuntimeException\n\tat org.apache.cassandra.distributed.test.DecommissionTest$BB.prepareUnbootstrapStreaming(DecommissionTest.java)\n\tat org.apache.cassandra.service.StorageService.prepareUnbootstrapStreaming(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.unbootstrap(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.decommission(StorageService.java)",
+      "raw_stacktrace_sample": "java.lang.RuntimeException: simulated error in prepareUnbootstrapStreaming\n\tat org.apache.cassandra.distributed.test.DecommissionTest$BB.prepareUnbootstrapStreaming(DecommissionTest.java:208)\n\tat org.apache.cassandra.service.StorageService.prepareUnbootstrapStreaming(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.unbootstrap(StorageService.java:5427)\n\tat org.apache.cassandra.service.StorageService.decommission(StorageService.java:5351)\n\tat org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected.lambda$testDecommissionAfterNodeRestart$81c80a4a$2(DecommissionTest_RestartInjected.java:192)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java:124)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected",
+          "testMethod": "testDecommissionAfterNodeRestart",
+          "position": "after_failed_decommission",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "043-a7a8df70",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-02/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected",
+          "testMethod": "testDecommissionAfterNodeRestart",
+          "position": "after_manual_restart",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "044-5be8ad0d",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-02/cassandra"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "group_id": 12,
+      "generalized_stacktrace": "Caused by: com.datastax.driver.core.exceptions.TransportException\n\tat com.datastax.driver.core.Connection$ConnectionCloseFuture.force(Connection.java)\n\tat com.datastax.driver.core.Connection$ConnectionCloseFuture.force(Connection.java)\n\tat com.datastax.driver.core.Connection.defunct(Connection.java)\n\tat com.datastax.driver.core.Connection$Dispatcher.exceptionCaught(Connection.java)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java)\n\tat com.datastax.shaded.netty.channel.DefaultChannelPipeline$HeadContext.exceptionCaught(DefaultChannelPipeline.java)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java)",
+      "raw_stacktrace_sample": "java.util.concurrent.ExecutionException: com.datastax.driver.core.exceptions.TransportException: [/127.0.0.1:9042] Connection has been closed\n\tat java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)\n\tat java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)\n\tat org.apache.cassandra.distributed.test.OverloadTest_RestartInjected.testApplyClientBackpressure(OverloadTest_RestartInjected.java:154)\n\tat org.apache.cassandra.distributed.test.OverloadTest_RestartInjected.applyClientBackpressure(OverloadTest_RestartInjected.java:72)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: com.datastax.driver.core.exceptions.TransportException: [/127.0.0.1:9042] Connection has been closed\n\tat com.datastax.driver.core.exceptions.TransportException.copy(TransportException.java:40)\n\tat com.datastax.driver.core.exceptions.TransportException.copy(TransportException.java:26)\n\tat com.datastax.driver.core.DriverThrowables.propagateCause(DriverThrowables.java:37)\n\tat com.datastax.driver.core.DefaultResultSetFuture.getUninterruptibly(DefaultResultSetFuture.java:295)\n\tat com.datastax.driver.core.AbstractSession.execute(AbstractSession.java:60)\n\tat com.datastax.driver.core.AbstractSession.execute(AbstractSession.java:41)\n\tat org.apache.cassandra.distributed.test.OverloadTest_RestartInjected.lambda$testApplyClientBackpressure$1(OverloadTest_RestartInjected.java:133)\n\tat java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\nCaused by: com.datastax.driver.core.exceptions.TransportException: [/127.0.0.1:9042] Connection has been closed\n\tat com.datastax.driver.core.Connection$ConnectionCloseFuture.force(Connection.java:1460)\n\tat com.datastax.driver.core.Connection$ConnectionCloseFuture.force(Connection.java:1441)\n\tat com.datastax.driver.core.Connection.defunct(Connection.java:624)\n\tat com.datastax.driver.core.Connection$Dispatcher.exceptionCaught(Connection.java:1363)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)\n\tat com.datastax.shaded.netty.channel.DefaultChannelPipeline$HeadContext.exceptionCaught(DefaultChannelPipeline.java:1377)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)\n\tat com.datastax.shaded.netty.channel.DefaultChannelPipeline.fireExceptionCaught(DefaultChannelPipeline.java:907)\n\tat com.datastax.shaded.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.handleReadException(AbstractNioByteChannel.java:125)\n\tat com.datastax.shaded.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:177)\n\tat com.datastax.shaded.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)\n\tat com.datastax.shaded.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)\n\tat com.datastax.shaded.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)\n\tat com.datastax.shaded.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\n\tat com.datastax.shaded.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\tat com.datastax.shaded.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat com.datastax.shaded.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "applyClientBackpressure",
+          "position": "after_queries_submitted",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "032-4a5e2787",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-09/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.OverloadTest_RestartInjected",
+          "testMethod": "clientBackpressureDisabled",
+          "position": "after_queries_submitted",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "032-263631b1",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-11/cassandra"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "group_id": 13,
+      "generalized_stacktrace": "org.awaitility.core.ConditionTimeoutException\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java)\n\tat org.apache.cassandra.distributed.test.AbstractHintWindowTest.insertData(AbstractHintWindowTest.java)",
+      "raw_stacktrace_sample": "org.awaitility.core.ConditionTimeoutException: Condition with org.apache.cassandra.distributed.test.AbstractHintWindowTest was not fulfilled within 10 seconds.\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java:78)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java:26)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:895)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:864)\n\tat org.apache.cassandra.distributed.test.AbstractHintWindowTest.insertData(AbstractHintWindowTest.java:122)\n\tat org.apache.cassandra.distributed.test.HintsPersistentWindowTest_RestartInjected.testPersistentHintWindow(HintsPersistentWindowTest_RestartInjected.java:165)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintsPersistentWindowTest_RestartInjected",
+          "testMethod": "testPersistentHintWindow",
+          "position": "after_node_startup",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "009-b5edb33b",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.HintsPersistentWindowTest_RestartInjected",
+          "testMethod": "testPersistentHintWindow",
+          "position": "after_hints_size_assertion",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "010-11b54bd5",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "group_id": 14,
+      "generalized_stacktrace": "Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException\n\tat com.datastax.driver.core.RequestHandler.reportNoMoreHosts(RequestHandler.java)\n\tat com.datastax.driver.core.RequestHandler.access$1200(RequestHandler.java)\n\tat com.datastax.driver.core.RequestHandler$SpeculativeExecution.findNextHostAndQuery(RequestHandler.java)\n\tat com.datastax.driver.core.RequestHandler.startNewExecution(RequestHandler.java)\n\tat com.datastax.driver.core.RequestHandler.sendRequest(RequestHandler.java)\n\tat com.datastax.driver.core.SessionManager.execute(SessionManager.java)\n\tat com.datastax.driver.core.SessionManager.prepareAsync(SessionManager.java)\n\tat com.datastax.driver.core.AbstractSession.prepareAsync(AbstractSession.java)\n\tat com.datastax.driver.core.AbstractSession.prepare(AbstractSession.java)",
+      "raw_stacktrace_sample": "com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)\n\tat com.datastax.driver.core.exceptions.NoHostAvailableException.copy(NoHostAvailableException.java:85)\n\tat com.datastax.driver.core.exceptions.NoHostAvailableException.copy(NoHostAvailableException.java:39)\n\tat com.datastax.driver.core.DriverThrowables.propagateCause(DriverThrowables.java:37)\n\tat com.datastax.driver.core.AbstractSession.prepare(AbstractSession.java:88)\n\tat org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest_RestartInjected.testUseWithMultipleKeyspaces(ReprepareNewBehaviourTest_RestartInjected.java:106)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)\n\tat com.datastax.driver.core.RequestHandler.reportNoMoreHosts(RequestHandler.java:285)\n\tat com.datastax.driver.core.RequestHandler.access$1200(RequestHandler.java:63)\n\tat com.datastax.driver.core.RequestHandler$SpeculativeExecution.findNextHostAndQuery(RequestHandler.java:377)\n\tat com.datastax.driver.core.RequestHandler.startNewExecution(RequestHandler.java:141)\n\tat com.datastax.driver.core.RequestHandler.sendRequest(RequestHandler.java:123)\n\tat com.datastax.driver.core.SessionManager.execute(SessionManager.java:707)\n\tat com.datastax.driver.core.SessionManager.prepareAsync(SessionManager.java:179)\n\tat com.datastax.driver.core.AbstractSession.prepareAsync(AbstractSession.java:106)\n\tat com.datastax.driver.core.AbstractSession.prepare(AbstractSession.java:86)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ReprepareNewBehaviourTest_RestartInjected",
+          "testMethod": "testUseWithMultipleKeyspaces",
+          "position": "after_switch_ks2",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "018-f85cd3b5",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-13/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.PrepareBatchStatementsTest_RestartInjected",
+          "testMethod": "testPreparedBatch",
+          "position": "after_schema_creation",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "050-27008f8e",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-31/cassandra"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "group_id": 15,
+      "generalized_stacktrace": "org.awaitility.core.ConditionTimeoutException\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java)",
+      "raw_stacktrace_sample": "org.awaitility.core.ConditionTimeoutException: Condition with org.apache.cassandra.distributed.test.SnapshotsTest_RestartInjected was not fulfilled within 20 seconds.\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java:78)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java:26)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:895)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:864)\n\tat org.apache.cassandra.distributed.test.SnapshotsTest_RestartInjected.waitForSnapshot(SnapshotsTest_RestartInjected.java:358)\n\tat org.apache.cassandra.distributed.test.SnapshotsTest_RestartInjected.waitForSnapshotPresent(SnapshotsTest_RestartInjected.java:345)\n\tat org.apache.cassandra.distributed.test.SnapshotsTest_RestartInjected.testSecondaryIndexCleanup(SnapshotsTest_RestartInjected.java:206)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.SnapshotsTest_RestartInjected",
+          "testMethod": "testSecondaryIndexCleanup",
+          "position": "after_snapshot",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "048-0453f216",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-14/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.SnapshotsTest_RestartInjected",
+          "testMethod": "testSnapshotsCleanupByTTL",
+          "position": "after_snapshot",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "061-cb80856f",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-38/cassandra"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "group_id": 16,
+      "generalized_stacktrace": "java.lang.IllegalStateException\n\tat org.apache.cassandra.distributed.shared.InstanceClassLoader.loadClassInternal(InstanceClassLoader.java)\n\tat org.apache.cassandra.distributed.shared.InstanceClassLoader.loadClass(InstanceClassLoader.java)\n\tat org.apache.cassandra.distributed.impl.FileLogAction.match(FileLogAction.java)\n\tat org.apache.cassandra.distributed.api.LogAction.watchFor(LogAction.java)\n\tat org.apache.cassandra.distributed.api.LogAction.watchFor(LogAction.java)",
+      "raw_stacktrace_sample": "java.lang.IllegalStateException: Can't load org.apache.cassandra.distributed.impl.FileLogAction$FileLineIterator. Instance class loader is already closed.\n\tat org.apache.cassandra.distributed.shared.InstanceClassLoader.loadClassInternal(InstanceClassLoader.java:118)\n\tat org.apache.cassandra.distributed.shared.InstanceClassLoader.loadClass(InstanceClassLoader.java:112)\n\tat org.apache.cassandra.distributed.impl.FileLogAction.match(FileLogAction.java:58)\n\tat org.apache.cassandra.distributed.api.LogAction.watchFor(LogAction.java:65)\n\tat org.apache.cassandra.distributed.api.LogAction.watchFor(LogAction.java:137)\n\tat org.apache.cassandra.distributed.test.JVMDTestTest_RestartInjected.instanceLogs(JVMDTestTest_RestartInjected.java:111)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.JVMDTestTest_RestartInjected",
+          "testMethod": "instanceLogs",
+          "position": "after_exception_trigger",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "062-7aca286b",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-20/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.UpgradeSSTablesTest_RestartInjected",
+          "testMethod": "compactionDoesNotCancelUpgradeSSTables",
+          "position": "after_upgradesstables_test2",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-7e61b015",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-24/cassandra"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "group_id": 17,
+      "generalized_stacktrace": "org.apache.cassandra.exceptions.UnavailableException\n\tat org.apache.cassandra.exceptions.UnavailableException.create(UnavailableException.java)\n\tat org.apache.cassandra.exceptions.UnavailableException.create(UnavailableException.java)\n\tat org.apache.cassandra.service.StorageProxy.findSuitableReplica(StorageProxy.java)\n\tat org.apache.cassandra.service.StorageProxy.mutateCounter(StorageProxy.java)\n\tat org.apache.cassandra.service.StorageProxy.mutate(StorageProxy.java)\n\tat org.apache.cassandra.service.StorageProxy.mutateWithTriggers(StorageProxy.java)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.executeWithoutCondition(ModificationStatement.java)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.execute(ModificationStatement.java)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java)\n\tat org.apache.cassandra.distributed.impl.Coordinator.unsafeExecuteInternal(Coordinator.java)\n\tat org.apache.cassandra.distributed.impl.Coordinator.lambda$executeWithResult$0(Coordinator.java)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java)\n\tat java.base/java.lang.Thread.run(Thread.java)",
+      "raw_stacktrace_sample": "org.apache.cassandra.exceptions.UnavailableException: Cannot achieve consistency level ONE\n\tat org.apache.cassandra.exceptions.UnavailableException.create(UnavailableException.java:37)\n\tat org.apache.cassandra.exceptions.UnavailableException.create(UnavailableException.java:31)\n\tat org.apache.cassandra.service.StorageProxy.findSuitableReplica(StorageProxy.java:1782)\n\tat org.apache.cassandra.service.StorageProxy.mutateCounter(StorageProxy.java:1725)\n\tat org.apache.cassandra.service.StorageProxy.mutate(StorageProxy.java:892)\n\tat org.apache.cassandra.service.StorageProxy.mutateWithTriggers(StorageProxy.java:1158)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.executeWithoutCondition(ModificationStatement.java:529)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.execute(ModificationStatement.java:502)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java:67)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java:47)\n\tat org.apache.cassandra.distributed.impl.Coordinator.unsafeExecuteInternal(Coordinator.java:94)\n\tat org.apache.cassandra.distributed.impl.Coordinator.lambda$executeWithResult$0(Coordinator.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CountersTest_RestartInjected",
+          "testMethod": "testUpdateCounter",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "029-71a48fba",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-31/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CountersTest_RestartInjected",
+          "testMethod": "testUpdateCounterWithDroppedCompactStorage",
+          "position": "after_counter_decrement",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "032-d7e603f0",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-32/cassandra"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "group_id": 18,
+      "generalized_stacktrace": "Caused by: java.lang.InterruptedException\n\tat java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java)\n\tat java.base/java.util.concurrent.CountDownLatch.await(CountDownLatch.java)",
+      "raw_stacktrace_sample": "java.util.concurrent.ExecutionException: org.apache.cassandra.utils.concurrent.UncheckedInterruptedException: java.lang.InterruptedException\n\tat java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)\n\tat java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)\n\tat org.apache.cassandra.distributed.test.ring.ReadsDuringBootstrapTest_RestartInjected.readsDuringBootstrapTest(ReadsDuringBootstrapTest_RestartInjected.java:141)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: org.apache.cassandra.utils.concurrent.UncheckedInterruptedException: java.lang.InterruptedException\n\tat org.apache.cassandra.utils.Throwables.unchecked(Throwables.java:307)\n\tat org.apache.cassandra.utils.Throwables.throwAsUncheckedException(Throwables.java:318)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.waitOn(IsolatedExecutor.java:285)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$sync$7(IsolatedExecutor.java:151)\n\tat org.apache.cassandra.distributed.impl.Coordinator.executeWithResult(Coordinator.java:61)\n\tat org.apache.cassandra.distributed.api.ICoordinator.execute(ICoordinator.java:32)\n\tat org.apache.cassandra.distributed.test.ring.ReadsDuringBootstrapTest_RestartInjected.lambda$readsDuringBootstrapTest$1(ReadsDuringBootstrapTest_RestartInjected.java:92)\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\nCaused by: java.lang.InterruptedException\n\tat java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1048)\n\tat java.base/java.util.concurrent.CountDownLatch.await(CountDownLatch.java:230)\n\tat org.apache.cassandra.distributed.test.ring.ReadsDuringBootstrapTest_RestartInjected$BB.getCachedReplicas(ReadsDuringBootstrapTest_RestartInjected.java:170)\n\tat org.apache.cassandra.locator.AbstractReplicationStrategy.getCachedReplicas(AbstractReplicationStrategy.java)\n\tat org.apache.cassandra.locator.AbstractReplicationStrategy.getNaturalReplicas(AbstractReplicationStrategy.java:98)\n\tat org.apache.cassandra.locator.AbstractReplicationStrategy.getNaturalReplicasForToken(AbstractReplicationStrategy.java:90)\n\tat org.apache.cassandra.locator.ReplicaLayout.forTokenReadLiveSorted(ReplicaLayout.java:331)\n\tat org.apache.cassandra.locator.ReplicaPlans.forRead(ReplicaPlans.java:723)\n\tat org.apache.cassandra.service.reads.AbstractReadExecutor.getReadExecutor(AbstractReadExecutor.java:196)\n\tat org.apache.cassandra.service.StorageProxy.fetchRows(StorageProxy.java:2119)\n\tat org.apache.cassandra.service.StorageProxy.readRegular(StorageProxy.java:2011)\n\tat org.apache.cassandra.service.StorageProxy.read(StorageProxy.java:1885)\n\tat org.apache.cassandra.db.SinglePartitionReadCommand$Group.execute(SinglePartitionReadCommand.java:1285)\n\tat org.apache.cassandra.cql3.statements.SelectStatement.execute(SelectStatement.java:427)\n\tat org.apache.cassandra.cql3.statements.SelectStatement.execute(SelectStatement.java:340)\n\tat org.apache.cassandra.cql3.statements.SelectStatement.execute(SelectStatement.java:108)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java:67)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java:47)\n\tat org.apache.cassandra.distributed.impl.Coordinator.unsafeExecuteInternal(Coordinator.java:94)\n\tat org.apache.cassandra.distributed.impl.Coordinator.lambda$executeWithResult$0(Coordinator.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ring.ReadsDuringBootstrapTest_RestartInjected",
+          "testMethod": "readsDuringBootstrapTest",
+          "position": "after_bootstrap_and_join",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "023-25a41f1b",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-40/cassandra"
+        },
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ring.ReadsDuringBootstrapTest_RestartInjected",
+          "testMethod": "readsDuringBootstrapTest",
+          "position": "after_cache_population",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "026-af60fba8",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-40/cassandra"
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "group_id": 19,
+      "generalized_stacktrace": "Caused by: java.util.concurrent.TimeoutException\n\tat java.base/java.util.concurrent.FutureTask.get(FutureTask.java)\n\tat org.awaitility.core.Uninterruptibles.getUninterruptibly(Uninterruptibles.java)\n\tat org.awaitility.core.Uninterruptibles.getUninterruptibly(Uninterruptibles.java)\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java)",
+      "raw_stacktrace_sample": "org.awaitility.core.ConditionTimeoutException: Condition with alias 'Did not see stream running or timed out' didn't complete within 3 minutes because condition with org.apache.cassandra.distributed.test.streaming.StreamFailureLogsFailureDueToSessionTimeoutTest_RestartInjected was not fulfilled.\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java:78)\n\tat org.awaitility.core.CallableCondition.await(CallableCondition.java:26)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:895)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:864)\n\tat org.apache.cassandra.distributed.test.streaming.StreamFailureLogsFailureDueToSessionTimeoutTest_RestartInjected.failureDueToSessionTimeout(StreamFailureLogsFailureDueToSessionTimeoutTest_RestartInjected.java:87)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.util.concurrent.TimeoutException\n\tat java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)\n\tat org.awaitility.core.Uninterruptibles.getUninterruptibly(Uninterruptibles.java:101)\n\tat org.awaitility.core.Uninterruptibles.getUninterruptibly(Uninterruptibles.java:81)\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:101)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.streaming.StreamFailureLogsFailureDueToSessionTimeoutTest_RestartInjected",
+          "testMethod": "failureDueToSessionTimeout",
+          "position": "after_trigger_streaming",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "036-63709395",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-12/cassandra"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "group_id": 20,
+      "generalized_stacktrace": "java.util.concurrent.RejectedExecutionException\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorBase.lambda$static$0(ThreadPoolExecutorBase.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.addTask(ThreadPoolExecutorPlus.java)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.submit(ThreadPoolExecutorPlus.java)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.submit(ThreadPoolExecutorPlus.java)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$async$6(IsolatedExecutor.java)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$sync$7(IsolatedExecutor.java)\n\tat org.apache.cassandra.distributed.impl.Coordinator.executeWithPagingWithResult(Coordinator.java)\n\tat org.apache.cassandra.distributed.api.ICoordinator.executeWithPaging(ICoordinator.java)",
+      "raw_stacktrace_sample": "java.util.concurrent.RejectedExecutionException: isolatedExecutor has shut down\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorBase.lambda$static$0(ThreadPoolExecutorBase.java:49)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.addTask(ThreadPoolExecutorPlus.java:50)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.submit(ThreadPoolExecutorPlus.java:81)\n\tat org.apache.cassandra.concurrent.ThreadPoolExecutorPlus.submit(ThreadPoolExecutorPlus.java:33)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$async$6(IsolatedExecutor.java:150)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$sync$7(IsolatedExecutor.java:151)\n\tat org.apache.cassandra.distributed.impl.Coordinator.executeWithPagingWithResult(Coordinator.java:180)\n\tat org.apache.cassandra.distributed.api.ICoordinator.executeWithPaging(ICoordinator.java:49)\n\tat org.apache.cassandra.distributed.test.GroupByTest_RestartInjected.testGroupWithDeletesAndPaging(GroupByTest_RestartInjected.java:204)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.GroupByTest_RestartInjected",
+          "testMethod": "testGroupWithDeletesAndPaging",
+          "position": "after_inserts",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "051-899d8831",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-12/cassandra"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "group_id": 21,
+      "generalized_stacktrace": "org.apache.cassandra.exceptions.UnavailableException\n\tat org.apache.cassandra.exceptions.UnavailableException.create(UnavailableException.java)\n\tat org.apache.cassandra.locator.ReplicaPlans.assureSufficientLiveReplicas(ReplicaPlans.java)\n\tat org.apache.cassandra.locator.ReplicaPlans.assureSufficientLiveReplicasForWrite(ReplicaPlans.java)\n\tat org.apache.cassandra.locator.ReplicaPlans.forWrite(ReplicaPlans.java)\n\tat org.apache.cassandra.locator.ReplicaPlans.forWrite(ReplicaPlans.java)\n\tat org.apache.cassandra.locator.ReplicaPlans.forWrite(ReplicaPlans.java)\n\tat org.apache.cassandra.locator.ReplicaPlans.forWrite(ReplicaPlans.java)\n\tat org.apache.cassandra.service.StorageProxy.performWrite(StorageProxy.java)\n\tat org.apache.cassandra.service.StorageProxy.mutate(StorageProxy.java)\n\tat org.apache.cassandra.service.StorageProxy.mutateWithTriggers(StorageProxy.java)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.executeWithoutCondition(ModificationStatement.java)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.execute(ModificationStatement.java)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java)\n\tat org.apache.cassandra.distributed.impl.Coordinator.unsafeExecuteInternal(Coordinator.java)\n\tat org.apache.cassandra.distributed.impl.Coordinator.lambda$executeWithResult$0(Coordinator.java)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java)\n\tat java.base/java.lang.Thread.run(Thread.java)",
+      "raw_stacktrace_sample": "org.apache.cassandra.exceptions.UnavailableException: Cannot achieve consistency level ALL\n\tat org.apache.cassandra.exceptions.UnavailableException.create(UnavailableException.java:37)\n\tat org.apache.cassandra.locator.ReplicaPlans.assureSufficientLiveReplicas(ReplicaPlans.java:193)\n\tat org.apache.cassandra.locator.ReplicaPlans.assureSufficientLiveReplicasForWrite(ReplicaPlans.java:136)\n\tat org.apache.cassandra.locator.ReplicaPlans.forWrite(ReplicaPlans.java:475)\n\tat org.apache.cassandra.locator.ReplicaPlans.forWrite(ReplicaPlans.java:466)\n\tat org.apache.cassandra.locator.ReplicaPlans.forWrite(ReplicaPlans.java:460)\n\tat org.apache.cassandra.locator.ReplicaPlans.forWrite(ReplicaPlans.java:449)\n\tat org.apache.cassandra.service.StorageProxy.performWrite(StorageProxy.java:1383)\n\tat org.apache.cassandra.service.StorageProxy.mutate(StorageProxy.java:894)\n\tat org.apache.cassandra.service.StorageProxy.mutateWithTriggers(StorageProxy.java:1158)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.executeWithoutCondition(ModificationStatement.java:529)\n\tat org.apache.cassandra.cql3.statements.ModificationStatement.execute(ModificationStatement.java:502)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java:67)\n\tat org.apache.cassandra.distributed.impl.CoordinatorHelper.unsafeExecuteInternal(CoordinatorHelper.java:47)\n\tat org.apache.cassandra.distributed.impl.Coordinator.unsafeExecuteInternal(Coordinator.java:94)\n\tat org.apache.cassandra.distributed.impl.Coordinator.lambda$executeWithResult$0(Coordinator.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.ring.NodeNotInRingTest_RestartInjected",
+          "testMethod": "nodeNotInRingTest",
+          "position": "after_first_populate",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "1",
+          "executionDir": "032-9a74b21a",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-20/cassandra"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "group_id": 22,
+      "generalized_stacktrace": "Caused by: java.util.concurrent.TimeoutException\n\t\tat org.apache.cassandra.utils.concurrent.AbstractFuture.get(AbstractFuture.java)\n\t\tat org.apache.cassandra.utils.FBUtilities.waitOnFutures(FBUtilities.java)",
+      "raw_stacktrace_sample": "java.lang.IllegalStateException: Can't load org.apache.cassandra.distributed.impl.FileLogAction$FileLineIterator. Instance class loader is already closed.\n\tat org.apache.cassandra.distributed.shared.InstanceClassLoader.loadClassInternal(InstanceClassLoader.java:118)\n\tat org.apache.cassandra.distributed.shared.InstanceClassLoader.loadClass(InstanceClassLoader.java:112)\n\tat org.apache.cassandra.distributed.impl.FileLogAction.match(FileLogAction.java:58)\n\tat org.apache.cassandra.distributed.api.LogAction.grep(LogAction.java:170)\n\tat org.apache.cassandra.distributed.api.LogAction.grep(LogAction.java:208)\n\tat org.apache.cassandra.distributed.test.UpgradeSSTablesTest_RestartInjected.upgradeSSTablesInterruptsOngoingCompaction(UpgradeSSTablesTest_RestartInjected.java:119)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tSuppressed: java.lang.RuntimeException: java.util.concurrent.TimeoutException\n\t\tat org.apache.cassandra.utils.Throwables.maybeFail(Throwables.java:79)\n\t\tat org.apache.cassandra.utils.FBUtilities.waitOnFutures(FBUtilities.java:543)\n\t\tat org.apache.cassandra.distributed.impl.AbstractCluster.close(AbstractCluster.java:1089)\n\t\tat org.apache.cassandra.distributed.test.UpgradeSSTablesTest_RestartInjected.upgradeSSTablesInterruptsOngoingCompaction(UpgradeSSTablesTest_RestartInjected.java:59)\n\tCaused by: java.util.concurrent.TimeoutException\n\t\tat org.apache.cassandra.utils.concurrent.AbstractFuture.get(AbstractFuture.java:253)\n\t\tat org.apache.cassandra.utils.FBUtilities.waitOnFutures(FBUtilities.java:535)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.UpgradeSSTablesTest_RestartInjected",
+          "testMethod": "upgradeSSTablesInterruptsOngoingCompaction",
+          "position": "after_upgradesstables",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "056-e90052ff",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-23/cassandra"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "group_id": 23,
+      "generalized_stacktrace": "Caused by: java.lang.InterruptedException\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.checkInterrupted(WaitQueue.java)\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.await(WaitQueue.java)\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.await(WaitQueue.java)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$AsyncAwaitable.await(Awaitable.java)\n\tat org.apache.cassandra.utils.concurrent.AsyncFuture.await(AsyncFuture.java)\n\tat org.apache.cassandra.utils.concurrent.AsyncFuture.await(AsyncFuture.java)\n\tat org.apache.cassandra.utils.concurrent.AbstractFuture.get(AbstractFuture.java)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.waitOn(IsolatedExecutor.java)",
+      "raw_stacktrace_sample": "java.util.concurrent.ExecutionException: org.apache.cassandra.utils.concurrent.UncheckedInterruptedException: java.lang.InterruptedException\n\tat org.apache.cassandra.utils.concurrent.AbstractFuture.getWhenDone(AbstractFuture.java:239)\n\tat org.apache.cassandra.utils.concurrent.AbstractFuture.get(AbstractFuture.java:246)\n\tat org.apache.cassandra.distributed.test.CASContentionTest_RestartInjected.testDynamicContentionTracing(CASContentionTest_RestartInjected.java:139)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: org.apache.cassandra.utils.concurrent.UncheckedInterruptedException: java.lang.InterruptedException\n\tat org.apache.cassandra.utils.Throwables.unchecked(Throwables.java:307)\n\tat org.apache.cassandra.utils.Throwables.throwAsUncheckedException(Throwables.java:318)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.waitOn(IsolatedExecutor.java:281)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.lambda$sync$7(IsolatedExecutor.java:151)\n\tat org.apache.cassandra.distributed.impl.Coordinator.executeWithResult(Coordinator.java:61)\n\tat org.apache.cassandra.distributed.api.ICoordinator.execute(ICoordinator.java:32)\n\tat org.apache.cassandra.distributed.test.CASContentionTest_RestartInjected.lambda$testDynamicContentionTracing$2(CASContentionTest_RestartInjected.java:109)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java:124)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\nCaused by: java.lang.InterruptedException\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.checkInterrupted(WaitQueue.java:361)\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.await(WaitQueue.java:320)\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.await(WaitQueue.java:299)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$AsyncAwaitable.await(Awaitable.java:306)\n\tat org.apache.cassandra.utils.concurrent.AsyncFuture.await(AsyncFuture.java:154)\n\tat org.apache.cassandra.utils.concurrent.AsyncFuture.await(AsyncFuture.java:46)\n\tat org.apache.cassandra.utils.concurrent.AbstractFuture.get(AbstractFuture.java:245)\n\tat org.apache.cassandra.distributed.impl.IsolatedExecutor.waitOn(IsolatedExecutor.java:276)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.CASContentionTest_RestartInjected",
+          "testMethod": "testDynamicContentionTracing",
+          "position": "after_filter_reset",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "007-e3ac67f6",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-25/cassandra"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "group_id": 24,
+      "generalized_stacktrace": "Caused by: java.lang.RuntimeException\n\tat org.apache.cassandra.service.StorageService.prepareForReplacement(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.prepareToJoin(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$startup$12(Instance.java)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java)",
+      "raw_stacktrace_sample": "org.restarttest.core.RestartException: Restart failed at position after_bootstrap\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:85)\n\tat org.restarttest.api.RestartPointBuilder.execute(RestartPointBuilder.java:172)\n\tat org.apache.cassandra.distributed.test.MigrationCoordinatorTest_RestartInjected.replaceNode(MigrationCoordinatorTest_RestartInjected.java:114)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.lang.RuntimeException: Failed to gracefully restart node 1\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.performGracefulRestart(CassandraClusterAdapter.java:156)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:48)\n\tat org.apache.cassandra.restart.CassandraClusterAdapter.restartNode(CassandraClusterAdapter.java:28)\n\tat org.restarttest.core.RestartExecutor.restartSingleNode(RestartExecutor.java:186)\n\tat org.restarttest.core.RestartExecutor.performRestart(RestartExecutor.java:170)\n\tat org.restarttest.core.RestartExecutor.executeRestart(RestartExecutor.java:112)\n\tat org.restarttest.core.RestartExecutor.execute(RestartExecutor.java:83)\nCaused by: java.lang.RuntimeException: Cannot replace address with a node that is already bootstrapped\n\tat org.apache.cassandra.service.StorageService.prepareForReplacement(StorageService.java:734)\n\tat org.apache.cassandra.service.StorageService.prepareToJoin(StorageService.java:1159)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java:1017)\n\tat org.apache.cassandra.service.StorageService.initServer(StorageService.java:947)\n\tat org.apache.cassandra.distributed.impl.Instance.lambda$startup$12(Instance.java:708)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java:124)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.MigrationCoordinatorTest_RestartInjected",
+          "testMethod": "replaceNode",
+          "position": "after_bootstrap",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "043-3d9de488",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-30/cassandra"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "group_id": 25,
+      "generalized_stacktrace": "Caused by: com.datastax.driver.core.exceptions.WriteTimeoutException\n\tat com.datastax.driver.core.Responses$Error$1.decode(Responses.java)\n\tat com.datastax.driver.core.Responses$Error$1.decode(Responses.java)\n\tat com.datastax.driver.core.Message$ProtocolDecoder.decode(Message.java)\n\tat com.datastax.driver.core.Message$ProtocolDecoder.decode(Message.java)\n\tat com.datastax.shaded.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java)",
+      "raw_stacktrace_sample": "com.datastax.driver.core.exceptions.WriteTimeoutException: Cassandra timeout during SIMPLE write query at consistency LOCAL_ONE (1 replica were required but only 0 acknowledged the write)\n\tat com.datastax.driver.core.exceptions.WriteTimeoutException.copy(WriteTimeoutException.java:87)\n\tat com.datastax.driver.core.exceptions.WriteTimeoutException.copy(WriteTimeoutException.java:25)\n\tat com.datastax.driver.core.DriverThrowables.propagateCause(DriverThrowables.java:37)\n\tat com.datastax.driver.core.DefaultResultSetFuture.getUninterruptibly(DefaultResultSetFuture.java:295)\n\tat com.datastax.driver.core.AbstractSession.execute(AbstractSession.java:60)\n\tat com.datastax.driver.core.AbstractSession.execute(AbstractSession.java:41)\n\tat org.apache.cassandra.distributed.test.QueriesTableTest_RestartInjected.shouldExposeReadsAndWrites(QueriesTableTest_RestartInjected.java:125)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: com.datastax.driver.core.exceptions.WriteTimeoutException: Cassandra timeout during SIMPLE write query at consistency LOCAL_ONE (1 replica were required but only 0 acknowledged the write)\n\tat com.datastax.driver.core.exceptions.WriteTimeoutException.copy(WriteTimeoutException.java:115)\n\tat com.datastax.driver.core.Responses$Error.asException(Responses.java:177)\n\tat com.datastax.driver.core.RequestHandler$SpeculativeExecution.onSet(RequestHandler.java:653)\n\tat com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1292)\n\tat com.datastax.driver.core.Connection$Dispatcher.channelRead0(Connection.java:1210)\n\tat com.datastax.shaded.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:99)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\tat com.datastax.shaded.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\tat com.datastax.shaded.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\tat com.datastax.shaded.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\tat com.datastax.shaded.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)\n\tat com.datastax.shaded.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\tat com.datastax.shaded.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)\n\tat com.datastax.driver.core.InboundTrafficMeter.channelRead(InboundTrafficMeter.java:40)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\tat com.datastax.shaded.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)\n\tat com.datastax.shaded.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat com.datastax.shaded.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)\n\tat com.datastax.shaded.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)\n\tat com.datastax.shaded.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)\n\tat com.datastax.shaded.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)\n\tat com.datastax.shaded.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)\n\tat com.datastax.shaded.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\n\tat com.datastax.shaded.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)\n\tat com.datastax.shaded.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat com.datastax.shaded.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\nCaused by: com.datastax.driver.core.exceptions.WriteTimeoutException: Cassandra timeout during SIMPLE write query at consistency LOCAL_ONE (1 replica were required but only 0 acknowledged the write)\n\tat com.datastax.driver.core.Responses$Error$1.decode(Responses.java:91)\n\tat com.datastax.driver.core.Responses$Error$1.decode(Responses.java:69)\n\tat com.datastax.driver.core.Message$ProtocolDecoder.decode(Message.java:299)\n\tat com.datastax.driver.core.Message$ProtocolDecoder.decode(Message.java:270)\n\tat com.datastax.shaded.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:88)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.QueriesTableTest_RestartInjected",
+          "testMethod": "shouldExposeReadsAndWrites",
+          "position": "after_table_create",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "050-86bc4cdf",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-33/cassandra"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "group_id": 26,
+      "generalized_stacktrace": "org.awaitility.core.ConditionTimeoutException\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java)\n\tat org.awaitility.core.AbstractHamcrestCondition.await(AbstractHamcrestCondition.java)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java)",
+      "raw_stacktrace_sample": "org.awaitility.core.ConditionTimeoutException: org.apache.cassandra.distributed.test.PreviewRepairSnapshotTest_RestartInjected expected not an empty string but was \"\" within 1 minutes.\n\tat org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:165)\n\tat org.awaitility.core.AbstractHamcrestCondition.await(AbstractHamcrestCondition.java:86)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:895)\n\tat org.awaitility.core.ConditionFactory.until(ConditionFactory.java:601)\n\tat org.apache.cassandra.distributed.test.PreviewRepairSnapshotTest_RestartInjected.lambda$checkSnapshot$d36cbfdb$1(PreviewRepairSnapshotTest_RestartInjected.java:189)\n\tat org.apache.cassandra.concurrent.FutureTask$2.call(FutureTask.java:124)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.PreviewRepairSnapshotTest_RestartInjected",
+          "testMethod": "testSnapshotOfSStablesContainingMismatchingTokens",
+          "position": "after_final_repair",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "009-9c8284de",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-38/cassandra"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "group_id": 27,
+      "generalized_stacktrace": "Caused by: java.lang.InterruptedException\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.checkInterrupted(WaitQueue.java)\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.awaitUntil(WaitQueue.java)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$AsyncAwaitable.awaitUntil(Awaitable.java)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$AsyncAwaitable.awaitUntil(Awaitable.java)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$Defaults.await(Awaitable.java)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$AbstractAwaitable.await(Awaitable.java)",
+      "raw_stacktrace_sample": "java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.InterruptedException\n\tat java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)\n\tat java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)\n\tat org.apache.cassandra.distributed.test.PreviewRepairTest_RestartInjected.testFinishingNonIntersectingIncRepairDuringPreview(PreviewRepairTest_RestartInjected.java:486)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nCaused by: java.lang.RuntimeException: java.lang.InterruptedException\n\tat org.apache.cassandra.distributed.test.PreviewRepairTest_RestartInjected.lambda$repair$6323037e$1(PreviewRepairTest_RestartInjected.java:819)\n\tat org.apache.cassandra.concurrent.FutureTask.call(FutureTask.java:61)\n\tat org.apache.cassandra.concurrent.FutureTask.run(FutureTask.java:71)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.base/java.lang.Thread.run(Thread.java:840)\nCaused by: java.lang.InterruptedException\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.checkInterrupted(WaitQueue.java:361)\n\tat org.apache.cassandra.utils.concurrent.WaitQueue$Standard$AbstractSignal.awaitUntil(WaitQueue.java:349)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$AsyncAwaitable.awaitUntil(Awaitable.java:314)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$AsyncAwaitable.awaitUntil(Awaitable.java:346)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$Defaults.await(Awaitable.java:114)\n\tat org.apache.cassandra.utils.concurrent.Awaitable$AbstractAwaitable.await(Awaitable.java:210)\n\tat org.apache.cassandra.distributed.test.PreviewRepairTest_RestartInjected.lambda$repair$6323037e$1(PreviewRepairTest_RestartInjected.java:815)\n",
+      "test_executions": [
+        {
+          "testClass": "org.apache.cassandra.distributed.test.PreviewRepairTest_RestartInjected",
+          "testMethod": "testFinishingNonIntersectingIncRepairDuringPreview",
+          "position": "testNonIntersect_after_range_repair",
+          "target": "node",
+          "mode": "GRACEFUL",
+          "index": "0",
+          "executionDir": "042-54060778",
+          "modulePath": "/Volumes/JFO_SSD/restart_testing/cloudlab_results/cassandra/dec16/RestartLogs_20251216_shuaiwang516_cassandra-restart-test_dec16_cassandra-cassandra-40/cassandra"
+        }
+      ],
+      "execution_count": 1
+    }
+  ],
+  "statistics": {
+    "unique_failure_groups": 27,
+    "total_non_assertion_failures": 130,
+    "total_assertion_failures": 317
+  }
+}
