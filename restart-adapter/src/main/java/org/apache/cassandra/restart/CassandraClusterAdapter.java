@@ -2,6 +2,7 @@ package org.apache.cassandra.restart;
 
 import org.apache.cassandra.distributed.Cluster;
 import org.apache.cassandra.distributed.api.IInvokableInstance;
+import org.apache.cassandra.distributed.api.NodeToolResult;
 import org.apache.cassandra.distributed.shared.ClusterUtils;
 import org.apache.cassandra.utils.FBUtilities;
 import org.restarttest.core.ClusterAdapter;
@@ -11,6 +12,8 @@ import org.restarttest.health.HealthCheckResult;
 import org.restarttest.state.ClusterState;
 import org.restarttest.state.DefaultClusterState;
 import org.restarttest.state.StateCapture;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.concurrent.Future;
@@ -26,6 +29,8 @@ import java.util.concurrent.TimeUnit;
  * This adapter accepts "node", "peer", or "all" as roles, treating all nodes identically.</p>
  */
 public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
+
+    private static final Logger logger = LoggerFactory.getLogger(CassandraClusterAdapter.class);
 
     public CassandraClusterAdapter() {
     }
@@ -130,27 +135,51 @@ public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
     // --- Private helper methods ---
 
     /**
-     * Perform graceful restart: clean shutdown followed by startup
+     * Perform graceful restart: drain node, then clean shutdown followed by startup.
+     *
+     * <p>The drain operation ensures:
+     * <ul>
+     *   <li>All memtables are flushed to SSTables on disk</li>
+     *   <li>The cluster is properly notified via gossip (DRAINING/DRAINED state)</li>
+     *   <li>Commit log segments are recycled to minimize replay time on restart</li>
+     *   <li>No new writes are accepted during shutdown</li>
+     * </ul>
+     *
+     * <p>This mimics production-like graceful shutdown behavior (e.g., systemctl stop cassandra).
      */
     private void performGracefulRestart(Cluster cluster, IInvokableInstance instance) throws Exception {
         int nodeNum = instance.config().num();
 
         try {
-            // Graceful shutdown with proper cleanup
+            // Step 1: Drain the node - this is the key to a truly graceful shutdown
+            // Drain flushes all memtables to disk, announces leaving to cluster via gossip,
+            // and recycles commit log segments to minimize recovery time on restart
+            logger.info("Draining node {} before graceful shutdown", nodeNum);
+            NodeToolResult drainResult = instance.nodetoolResult("drain");
+            if (drainResult.getRc() != 0) {
+                logger.warn("Drain command returned non-zero exit code {} for node {}: {}",
+                        drainResult.getRc(), nodeNum, drainResult.getStdout());
+                // Continue with shutdown anyway - drain may fail if node is already draining
+            }
+
+            // Step 2: Shutdown the node (now with all data safely on disk)
+            logger.info("Shutting down node {} after drain", nodeNum);
             Future<Void> shutdownFuture = instance.shutdown(true);
             FBUtilities.waitOnFuture(shutdownFuture);
 
             // Brief pause to allow cluster to detect node is down
             Thread.sleep(1000);
 
-            // Restart the node
+            // Step 3: Restart the node
+            logger.info("Starting up node {}", nodeNum);
             instance.startup();
 
-            // Wait for node to rejoin ring
+            // Step 4: Wait for node to rejoin ring
             IInvokableInstance referenceNode = findRunningNode(cluster, nodeNum);
             if (referenceNode != null) {
                 ClusterUtils.awaitRingJoin(referenceNode, instance);
             }
+            logger.info("Node {} graceful restart completed", nodeNum);
 
         } catch (Exception e) {
             throw new RuntimeException("Failed to gracefully restart node " + nodeNum, e);
