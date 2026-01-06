@@ -137,44 +137,36 @@ public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
     /**
      * Perform graceful restart: drain node, then clean shutdown followed by startup.
      *
-     * <p>The drain operation ensures:
+     * <p>The graceful shutdown via instance.shutdown(true) ensures:
      * <ul>
      *   <li>All memtables are flushed to SSTables on disk</li>
-     *   <li>The cluster is properly notified via gossip (DRAINING/DRAINED state)</li>
-     *   <li>Commit log segments are recycled to minimize replay time on restart</li>
-     *   <li>No new writes are accepted during shutdown</li>
+     *   <li>The cluster is properly notified via gossip</li>
+     *   <li>All services are cleanly stopped</li>
      * </ul>
      *
-     * <p>This mimics production-like graceful shutdown behavior (e.g., systemctl stop cassandra).
+     * <p>Note: We use instance.shutdown(true) directly instead of calling nodetool drain
+     * first, because the distributed test framework's shutdown() method handles graceful
+     * cleanup internally. Calling drain before shutdown causes conflicts as drain shuts
+     * down MessagingService, but shutdown() expects it to still be running.
      */
     private void performGracefulRestart(Cluster cluster, IInvokableInstance instance) throws Exception {
         int nodeNum = instance.config().num();
 
         try {
-            // Step 1: Drain the node - this is the key to a truly graceful shutdown
-            // Drain flushes all memtables to disk, announces leaving to cluster via gossip,
-            // and recycles commit log segments to minimize recovery time on restart
-            logger.info("Draining node {} before graceful shutdown", nodeNum);
-            NodeToolResult drainResult = instance.nodetoolResult("drain");
-            if (drainResult.getRc() != 0) {
-                logger.warn("Drain command returned non-zero exit code {} for node {}: {}",
-                        drainResult.getRc(), nodeNum, drainResult.getStdout());
-                // Continue with shutdown anyway - drain may fail if node is already draining
-            }
-
-            // Step 2: Shutdown the node (now with all data safely on disk)
-            logger.info("Shutting down node {} after drain", nodeNum);
+            // Step 1: Gracefully shutdown the node
+            // The shutdown(true) method handles flushing, gossip announcements, and clean service shutdown
+            logger.info("Gracefully shutting down node {}", nodeNum);
             Future<Void> shutdownFuture = instance.shutdown(true);
             FBUtilities.waitOnFuture(shutdownFuture);
 
             // Brief pause to allow cluster to detect node is down
             Thread.sleep(1000);
 
-            // Step 3: Restart the node
+            // Step 2: Restart the node
             logger.info("Starting up node {}", nodeNum);
             instance.startup();
 
-            // Step 4: Wait for node to rejoin ring
+            // Step 3: Wait for node to rejoin ring
             IInvokableInstance referenceNode = findRunningNode(cluster, nodeNum);
             if (referenceNode != null) {
                 ClusterUtils.awaitRingJoin(referenceNode, instance);
