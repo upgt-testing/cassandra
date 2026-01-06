@@ -1,0 +1,65 @@
+======================================================================
+Test Result Analysis Summary
+======================================================================
+Generated: 2026-01-05 18:47:53
+
+Step 1: Execution Parsing
+----------------------------------------------------------------------
+Total baseline executions: 518
+Total restart executions: 2162
+
+Step 2: Failure Analysis
+----------------------------------------------------------------------
+Baseline failures: 11
+Restart failures (baseline passed): 1240
+Ignored restart executions (baseline failed): 48
+
+Step 3: Failure Grouping
+----------------------------------------------------------------------
+Unique failure groups: 19
+Total restart failures analyzed: 0
+
+Group Distribution:
+----------------------------------------------------------------------
+Group   1:  955 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.guardrails.GuardrailPartitionSizeTest_RestartInjected.testPartitionSize @ after_yaml_config_test/node
+Group   2:   20 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.DisableBinaryTest_RestartInjected.testDisallowsNewRequests @ after_transport_stop/node
+Group   3:   12 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.HintDataReappearingTest_RestartInjected.demonstrateHintCausesDataReappearanceWriteTimeout @ after_pause_hints/node
+Group   4:   10 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.ring.NodeNotInRingTest_RestartInjected.nodeNotInRingTest @ after_node_removal/node
+Group   5:    9 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.metric.TableMetricTest_RestartInjected.systemTables @ after_load_system_tables/node
+Group   6:    4 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected.testDecommission @ after_decommission_tests/node
+Group   7:    3 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.hostreplacement.HostReplacementOfDownedClusterTest_RestartInjected.hostReplacementOfDeadNodeAndOtherNodeStartsAfter @ after_stop_all_2/node
+Group   8:    2 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.HintsPersistentWindowTest_RestartInjected.testPersistentHintWindow @ after_node_startup/node
+Group   9:    2 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.GroupByTest_RestartInjected.testGroupWithDeletesAndPaging @ after_inserts/node
+Group  10:    2 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.DecommissionTest_RestartInjected.testDecommissionAfterNodeRestart @ after_failed_decommission/node
+Group  11:    2 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.jmx.JMXFeatureTest_RestartInjected.testShutDownAndRestartInstances @ after_all_getters_test/node
+Group  12:    2 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.OverloadTest_RestartInjected.applyClientBackpressure @ after_queries_submitted/node
+Group  13:    2 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.QueriesTableTest_RestartInjected.shouldExposeReadsAndWrites @ after_async_queries/node
+Group  14:    2 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.ring.ReadsDuringBootstrapTest_RestartInjected.readsDuringBootstrapTest @ after_bootstrap_and_join/node
+Group  15:    1 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.ring.NodeNotInRingTest_RestartInjected.nodeNotInRingTest @ after_first_populate/node
+Group  16:    1 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.streaming.StreamFailureLogsFailureDueToSessionTimeoutTest_RestartInjected.failureDueToSessionTimeout @ after_trigger_streaming/node
+Group  17:    1 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.MigrationCoordinatorTest_RestartInjected.replaceNode @ after_bootstrap/node
+Group  18:    1 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.QueriesTableTest_RestartInjected.shouldExposeReadsAndWrites @ after_table_create/node
+Group  19:    1 executions (  0.0%) - Example: org.apache.cassandra.distributed.test.JVMDTestTest_RestartInjected.instanceLogs @ after_exception_trigger/node
+
+Baseline Failures Details:
+----------------------------------------------------------------------
+  1. org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected.incompletePropose (ignored 5 restart executions)
+  2. org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected.testRepairIncompletePropose (ignored 4 restart executions)
+  3. org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected.testRepairIncompleteCommit (ignored 4 restart executions)
+  4. org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected.incompleteCommit (ignored 3 restart executions)
+  5. org.apache.cassandra.distributed.test.BootstrapBinaryDisabledTest_RestartInjected.test (ignored 5 restart executions)
+  6. org.apache.cassandra.distributed.test.metrics.StreamingMetricsTest_RestartInjected.testMetricsWithRepairAndStreamingToTwoNodes (ignored 6 restart executions)
+  7. org.apache.cassandra.distributed.test.metrics.StreamingMetricsTest_RestartInjected.testMetricsWithRebuildAndStreamingToTwoNodes (ignored 6 restart executions)
+  8. org.apache.cassandra.distributed.test.NativeTransportEncryptionOptionsTest_RestartInjected.negotiatedProtocolMustBeAcceptedProtocolTest (ignored 4 restart executions)
+  9. org.apache.cassandra.distributed.test.topology.DecommissionAvoidTimeouts_RestartInjected.test (ignored 3 restart executions)
+ 10. org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected.simpleUpdate (ignored 4 restart executions)
+ 11. org.apache.cassandra.distributed.test.CASCommonTestCases_RestartInjected.incompletePrepare (ignored 4 restart executions)
+
+Output Files:
+----------------------------------------------------------------------
+Step 1 results: results/cassandra/dec20/step1_execution_summary.json
+Step 2 results: results/cassandra/dec20/step2_failures.json
+Step 3 results: results/cassandra/dec20/step3_grouped_failures.json
+This summary:   results/cassandra/dec20/summary.txt
+
+======================================================================
