@@ -4,13 +4,13 @@ This file tracks 19 failure groups ordered by priority for debugging.
 Total failures: 1032 non-assertion failures, 208 assertion failures
 
 Priority Legend:
-- **HIGH PRIORITY**: NPE/IndexOutOfBounds from NON-restarttest code
+- **HIGH PRIORITY**: NPE/IndexOutOfBounds from NON-restarttest code (likely actual bugs)
 - **MEDIUM PRIORITY**: Other runtime exceptions from non-restarttest code
 - **LOW PRIORITY**: Failures from restarttest modules, timeouts, configuration issues
 
 ---
 
-## HIGH PRIORITY FAILURES
+## HIGH PRIORITY FAILURES (Likely Actual Bugs)
 
 ### [FP] Group 3: NullPointerException in UUID.fromString
 **Priority: HIGHEST - NPE in core Java/Cassandra code**
@@ -35,19 +35,23 @@ java.lang.NullPointerException: Cannot invoke "String.length()" because "name" i
 
 **Example Test Executions (12 total):**
 1. Test: `HintDataReappearingTest_RestartInjected.demonstrateHintCausesDataReappearanceWriteTimeout`
-   - Position: `after_pause_hints`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `003-6ea8e9de`
-
+   - "position": "after_pause_hints"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "003-6ea8e9de"
 2. Test: `HintDataReappearingTest_RestartInjected.demonstrateHintCausesDataReappearanceWriteTimeout`
-   - Position: `after_insert_and_filter_reset`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `004-c3a515f0`
-
+   - "position": "after_insert_and_filter_reset"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "004-c3a515f0"
 3. Test: `HintDataReappearingTest_RestartInjected.demonstrateHintCausesDataReappearanceWriteTimeout`
-   - Position: `after_first_flush`
-   - Mode: GRACEFUL, Node 1
-   - Dir: `005-d26ee023`
+   - "position": "after_first_flush"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "1"
+   - "executionDir": "005-d26ee023"
 
 ---
 
@@ -94,23 +98,27 @@ Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Set.iterator
 
 **Example Test Executions (9 total):**
 1. Test: `TableMetricTest_RestartInjected.systemTables`
-   - Position: `after_load_system_tables`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `039-b1422257`
-
+   - "position": "after_load_system_tables"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "039-b1422257"
 2. Test: `TableMetricTest_RestartInjected.userTables`
-   - Position: `after_load_system_tables`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `002-30bec6a1`
-
+   - "position": "after_load_system_tables"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "002-30bec6a1"
 3. Test: `TableMetricTest_RestartInjected.userTables`
-   - Position: `after_table_create`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `003-334986c3`
+   - "position": "after_table_create"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "003-334986c3"
 
 ---
 
-### [ ] Group 11: NullPointerException in ClusterUtils
+### [TEST-BUG] Group 11: NullPointerException in ClusterUtils
 **Priority: HIGH - NPE in cluster gossip code**
 
 **Root Cause:**
@@ -145,20 +153,23 @@ Caused by: java.lang.NullPointerException
 
 **Example Test Executions (2 total):**
 1. Test: `JMXFeatureTest_RestartInjected.testShutDownAndRestartInstances`
-   - Position: `after_all_getters_test`
-   - Mode: GRACEFUL, Node 1
-   - Dir: `010-901071ff`
-
+   - "position": "after_all_getters_test"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "1"
+   - "executionDir": "010-901071ff"
 2. Test: `JMXGetterCheckTest_RestartInjected.testGetters`
-   - Position: `after_getters_test`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `037-acaf07f8`
+   - "position": "after_getters_test"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "037-acaf07f8"
 
 ---
 
 ## MEDIUM PRIORITY FAILURES (Runtime Exceptions in Core Code)
 
-### [ ] Group 4: RuntimeException - Unable to gossip with peers
+### [FP] Group 4: RuntimeException - Unable to gossip with peers
 **Priority: MEDIUM - Gossip communication failure**
 
 **Root Cause:**
@@ -204,23 +215,27 @@ Caused by: java.lang.RuntimeException: Unable to gossip with any peers
 
 **Example Test Executions (10 total):**
 1. Test: `NodeNotInRingTest_RestartInjected.nodeNotInRingTest`
-   - Position: `after_node_removal`
-   - Mode: GRACEFUL, Node 2
-   - Dir: `015-cd6d2ba3`
-
+   - "position": "after_node_removal"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "2"
+   - "executionDir": "015-cd6d2ba3"
 2. Test: `GossipShutdownTest_RestartInjected.shutdownStayDownTest`
-   - Position: `after_filter_setup`
-   - Mode: GRACEFUL, Node 1
-   - Dir: `022-0fa9efae`
-
+   - "position": "after_filter_setup"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "1"
+   - "executionDir": "022-0fa9efae"
 3. Test: `HostReplacementTest_RestartInjected.seedGoesDownBeforeDownHost`
-   - Position: `after_node_stop`
-   - Mode: GRACEFUL, Node 2
-   - Dir: `005-ba5ca057`
+   - "position": "after_node_stop"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "2"
+   - "executionDir": "005-ba5ca057"
 
 ---
 
-### [ ] Group 1: RejectedExecutionException in Netty event executor
+### [FP] Group 1: RejectedExecutionException in Netty event executor
 **Priority: MEDIUM - Event executor terminated during shutdown**
 
 **Root Cause:**
@@ -279,23 +294,27 @@ Caused by: java.util.concurrent.RejectedExecutionException: event executor termi
 
 **Example Test Executions (Many - same test pattern):**
 1. Test: `GuardrailPartitionSizeTest_RestartInjected.testPartitionSize`
-   - Position: `after_yaml_config_test`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `002-de0d183e`
-
+   - "position": "after_yaml_config_test"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "002-de0d183e"
 2. Test: `GuardrailPartitionSizeTest_RestartInjected.testPartitionSize`
-   - Position: `after_table_create`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `003-a10c3aea`
-
+   - "position": "after_table_create"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "003-a10c3aea"
 3. Test: `GuardrailPartitionSizeTest_RestartInjected.testPartitionSize`
-   - Position: `after_table_create`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `004-a10c3aea5da2`
+   - "position": "after_table_create"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "004-a10c3aea5da2"
 
 ---
 
-### [ ] Group 9: RejectedExecutionException - isolatedExecutor shutdown
+### [FP] Group 9: RejectedExecutionException - isolatedExecutor shutdown
 **Priority: MEDIUM - Executor shutdown during test**
 
 **Root Cause:**
@@ -326,18 +345,21 @@ java.util.concurrent.RejectedExecutionException: isolatedExecutor has shut down
 
 **Example Test Executions (2 total):**
 1. Test: `GroupByTest_RestartInjected.testGroupWithDeletesAndPaging`
-   - Position: `after_inserts`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `030-899d8831`
-
+   - "position": "after_inserts"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "030-899d8831"
 2. Test: `HintsServiceMetricsTest_RestartInjected.testHintsServiceMetrics`
-   - Position: `after_first_half_writes`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `012-7913c69e`
+   - "position": "after_first_half_writes"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "012-7913c69e"
 
 ---
 
-### [ ] Group 10: RuntimeException - Simulated decommission error
+### [FP] Group 10: RuntimeException - Simulated decommission error
 **Priority: MEDIUM - Test-induced error**
 
 **Root Cause:**
@@ -366,18 +388,21 @@ java.lang.RuntimeException: simulated error in prepareUnbootstrapStreaming
 
 **Example Test Executions (2 total):**
 1. Test: `DecommissionTest_RestartInjected.testDecommissionAfterNodeRestart`
-   - Position: `after_failed_decommission`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `025-a7a8df70`
-
+   - "position": "after_failed_decommission"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "025-a7a8df70"
 2. Test: `DecommissionTest_RestartInjected.testDecommissionAfterNodeRestart`
-   - Position: `after_manual_restart`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `026-5be8ad0d`
+   - "position": "after_manual_restart"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "026-5be8ad0d"
 
 ---
 
-### [ ] Group 14: InterruptedException during bootstrap reads
+### [FP] Group 14: InterruptedException during bootstrap reads
 **Priority: MEDIUM - Thread interruption issue**
 
 **Root Cause:**
@@ -439,18 +464,21 @@ Caused by: java.lang.InterruptedException
 
 **Example Test Executions (2 total):**
 1. Test: `ReadsDuringBootstrapTest_RestartInjected.readsDuringBootstrapTest`
-   - Position: `after_bootstrap_and_join`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `013-25a41f1b`
-
+   - "position": "after_bootstrap_and_join"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "013-25a41f1b"
 2. Test: `ReadsDuringBootstrapTest_RestartInjected.readsDuringBootstrapTest`
-   - Position: `after_cache_population`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `016-af60fba8`
+   - "position": "after_cache_population"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "016-af60fba8"
 
 ---
 
-### [ ] Group 17: RuntimeException - Cannot replace bootstrapped node
+### [FP] Group 17: RuntimeException - Cannot replace bootstrapped node
 **Priority: MEDIUM - Configuration/state issue**
 
 **Root Cause:**
@@ -494,13 +522,15 @@ Caused by: java.lang.RuntimeException: Cannot replace address with a node that i
 
 **Example Test Executions (1 total):**
 1. Test: `MigrationCoordinatorTest_RestartInjected.replaceNode`
-   - Position: `after_bootstrap`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `027-3d9de488`
+   - "position": "after_bootstrap"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "027-3d9de488"
 
 ---
 
-### [ ] Group 19: IllegalStateException - Instance class loader closed
+### [FP] Group 19: IllegalStateException - Instance class loader closed
 **Priority: MEDIUM - Class loader lifecycle issue**
 
 **Root Cause:**
@@ -526,15 +556,17 @@ java.lang.IllegalStateException: Can't load org.apache.cassandra.distributed.imp
 
 **Example Test Executions (1 total):**
 1. Test: `JVMDTestTest_RestartInjected.instanceLogs`
-   - Position: `after_exception_trigger`
-   - Mode: GRACEFUL, Node 1
-   - Dir: `034-7aca286b`
+   - "position": "after_exception_trigger"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "1"
+   - "executionDir": "034-7aca286b"
 
 ---
 
 ## LOW PRIORITY FAILURES (Expected/Configuration/Timeout Issues)
 
-### [ ] Group 2: NoHostAvailableException - Transport unavailable
+### [FP] Group 2: NoHostAvailableException - Transport unavailable
 **Priority: LOW - Expected when transport is disabled**
 
 **Root Cause:**
@@ -568,23 +600,27 @@ Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All hos
 
 **Example Test Executions (20 total):**
 1. Test: `DisableBinaryTest_RestartInjected.testDisallowsNewRequests`
-   - Position: `after_transport_stop`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `028-a478f20a`
-
+   - "position": "after_transport_stop"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "028-a478f20a"
 2. Test: `OverloadTest_RestartInjected.applyClientBackpressure`
-   - Position: `after_initial_query`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `019-535dae58`
-
+   - "position": "after_initial_query"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "019-535dae58"
 3. Test: `OverloadTest_RestartInjected.applyClientBackpressure`
-   - Position: `after_enable_slow_select`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `020-14c36077`
+   - "position": "after_enable_slow_select"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "020-14c36077"
 
 ---
 
-### [ ] Group 6: ConfigurationException - Decommissioned node rejoin
+### [FP] Group 6: ConfigurationException - Decommissioned node rejoin
 **Priority: LOW - Expected configuration check**
 
 **Root Cause:**
@@ -626,23 +662,27 @@ Caused by: org.apache.cassandra.exceptions.ConfigurationException: This node was
 
 **Example Test Executions (4 total):**
 1. Test: `DecommissionTest_RestartInjected.testDecommission`
-   - Position: `after_decommission_tests`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `037-dabc4255`
-
+   - "position": "after_decommission_tests"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "037-dabc4255"
 2. Test: `HintedHandoffAddRemoveNodesTest_RestartInjected.shouldAvoidHintTransferOnDecommission`
-   - Position: `after_decommission`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `023-da6c8e70`
-
+   - "position": "after_decommission"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "023-da6c8e70"
 3. Test: `DecommissionTest_RestartInjected.testDecommissionAfterNodeRestart`
-   - Position: `after_successful_decommission`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `027-76bbfef7`
+   - "position": "after_successful_decommission"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "027-76bbfef7"
 
 ---
 
-### [ ] Group 7: IllegalStateException - Shutdown instance delegate null
+### [FP] Group 7: IllegalStateException - Shutdown instance delegate null
 **Priority: LOW - Expected after shutdown**
 
 **Root Cause:**
@@ -678,23 +718,27 @@ Caused by: java.lang.IllegalStateException: Can't use shutdown instances, delega
 
 **Example Test Executions (3 total):**
 1. Test: `HostReplacementOfDownedClusterTest_RestartInjected.hostReplacementOfDeadNodeAndOtherNodeStartsAfter`
-   - Position: `after_stop_all_2`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `004-211b7df2`
-
+   - "position": "after_stop_all_2"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "004-211b7df2"
 2. Test: `HostReplacementOfDownedClusterTest_RestartInjected.hostReplacementOfDeadNode`
-   - Position: `after_stop_all`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `004-b9fd3ca8`
-
+   - "position": "after_stop_all"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "004-b9fd3ca8"
 3. Test: `RestartTest_RestartInjected.test`
-   - Position: `after_both_nodes_shutdown`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `020-6043a934`
+   - "position": "after_both_nodes_shutdown"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "020-6043a934"
 
 ---
 
-### [ ] Group 8: ConditionTimeoutException - Hints window timeout
+### [FP] Group 8: ConditionTimeoutException - Hints window timeout
 **Priority: LOW - Timeout waiting for condition**
 
 **Root Cause:**
@@ -720,18 +764,21 @@ org.awaitility.core.ConditionTimeoutException: Condition with org.apache.cassand
 
 **Example Test Executions (2 total):**
 1. Test: `HintsPersistentWindowTest_RestartInjected.testPersistentHintWindow`
-   - Position: `after_node_startup`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `009-b5edb33b`
-
+   - "position": "after_node_startup"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "009-b5edb33b"
 2. Test: `HintsPersistentWindowTest_RestartInjected.testPersistentHintWindow`
-   - Position: `after_hints_size_assertion`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `010-11b54bd5`
+   - "position": "after_hints_size_assertion"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "010-11b54bd5"
 
 ---
 
-### [ ] Group 12: TransportException - Connection closed
+### [FP] Group 12: TransportException - Connection closed
 **Priority: LOW - Connection closed during restart**
 
 **Root Cause:**
@@ -787,18 +834,21 @@ Caused by: com.datastax.driver.core.exceptions.TransportException: [/127.0.0.1:9
 
 **Example Test Executions (2 total):**
 1. Test: `OverloadTest_RestartInjected.applyClientBackpressure`
-   - Position: `after_queries_submitted`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `021-4a5e2787`
-
+   - "position": "after_queries_submitted"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "021-4a5e2787"
 2. Test: `OverloadTest_RestartInjected.clientBackpressureDisabled`
-   - Position: `after_queries_submitted`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `021-263631b1`
+   - "position": "after_queries_submitted"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "021-263631b1"
 
 ---
 
-### [ ] Group 13: TimeoutException - Executor termination timeout
+### [FP] Group 13: TimeoutException - Executor termination timeout
 **Priority: LOW - Timeout during shutdown**
 
 **Root Cause:**
@@ -847,18 +897,21 @@ Caused by: java.util.concurrent.TimeoutException: org.apache.cassandra.concurren
 
 **Example Test Executions (2 total):**
 1. Test: `QueriesTableTest_RestartInjected.shouldExposeReadsAndWrites`
-   - Position: `after_async_queries`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `030-9491c198`
-
+   - "position": "after_async_queries"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "030-9491c198"
 2. Test: `QueriesTableTest_RestartInjected.shouldExposeCAS`
-   - Position: `cas_after_async_update`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `030-2c8171fc`
+   - "position": "cas_after_async_update"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "030-2c8171fc"
 
 ---
 
-### [ ] Group 15: UnavailableException - Consistency level failure
+### [FP] Group 15: UnavailableException - Consistency level failure
 **Priority: LOW - Expected consistency failure**
 
 **Root Cause:**
@@ -897,13 +950,15 @@ org.apache.cassandra.exceptions.UnavailableException: Cannot achieve consistency
 
 **Example Test Executions (1 total):**
 1. Test: `NodeNotInRingTest_RestartInjected.nodeNotInRingTest`
-   - Position: `after_first_populate`
-   - Mode: GRACEFUL, Node 1
-   - Dir: `017-9a74b21a`
+   - "position": "after_first_populate"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "1"
+   - "executionDir": "017-9a74b21a"
 
 ---
 
-### [ ] Group 16: TimeoutException - Streaming timeout
+### [FP] Group 16: TimeoutException - Streaming timeout
 **Priority: LOW - Timeout waiting for stream**
 
 **Root Cause:**
@@ -934,13 +989,15 @@ Caused by: java.util.concurrent.TimeoutException
 
 **Example Test Executions (1 total):**
 1. Test: `StreamFailureLogsFailureDueToSessionTimeoutTest_RestartInjected.failureDueToSessionTimeout`
-   - Position: `after_trigger_streaming`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `020-63709395`
+   - "position": "after_trigger_streaming"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "020-63709395"
 
 ---
 
-### [ ] Group 18: WriteTimeoutException - Write timeout
+### [FP] Group 18: WriteTimeoutException - Write timeout
 **Priority: LOW - Timeout during write**
 
 **Root Cause:**
@@ -1017,9 +1074,11 @@ Caused by: com.datastax.driver.core.exceptions.WriteTimeoutException: Cassandra 
 
 **Example Test Executions (1 total):**
 1. Test: `QueriesTableTest_RestartInjected.shouldExposeReadsAndWrites`
-   - Position: `after_table_create`
-   - Mode: GRACEFUL, Node 0
-   - Dir: `029-86bc4cdf`
+   - "position": "after_table_create"
+   - "target": "node"
+   - "mode": "GRACEFUL"
+   - "index": "0"
+   - "executionDir": "029-86bc4cdf"
 
 ---
 

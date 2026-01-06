@@ -1,0 +1,31 @@
+diff --git a/test/distributed/org/apache/cassandra/distributed/shared/ClusterUtils.java b/test/distributed/org/apache/cassandra/distributed/shared/ClusterUtils.java
+index 3bded5cd16..3e1a9ee03e 100644
+--- a/test/distributed/org/apache/cassandra/distributed/shared/ClusterUtils.java
++++ b/test/distributed/org/apache/cassandra/distributed/shared/ClusterUtils.java
+@@ -81,6 +81,14 @@ import static org.assertj.core.api.Assertions.assertThat;
+ @Isolated
+ public class ClusterUtils
+ {
++    /**
++     * Pattern to match gossip endpoint lines in the format: [hostname]/ipaddress[:port]
++     * Examples: "/127.0.0.1", "localhost/127.0.0.1", "localhost/127.0.0.1:7000"
++     * InetAddress.toString() returns "hostname/ipaddress" format where hostname may be empty.
++     */
++    private static final Pattern GOSSIP_ENDPOINT_PATTERN =
++        Pattern.compile("^[^\\s/]*/\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}(:\\d+)?$");
++
+     /**
+      * Start the instance with the given System Properties, after the instance has started, the properties will be cleared.
+      */
+@@ -682,7 +690,10 @@ public class ClusterUtils
+         String currentInstance = null;
+         for (String line : lines)
+         {
+-            if (line.startsWith("/"))
++            // Endpoint lines match pattern: [hostname]/ipaddress[:port]
++            // Examples: "/127.0.0.1", "localhost/127.0.0.1", "localhost/127.0.0.1:7000"
++            // Key-value lines are indented with spaces (e.g., "  generation:123")
++            if (GOSSIP_ENDPOINT_PATTERN.matcher(line).matches())
+             {
+                 // start of new instance
+                 currentInstance = line;
