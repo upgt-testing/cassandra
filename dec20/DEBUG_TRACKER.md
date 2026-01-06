@@ -4,15 +4,15 @@ This file tracks 19 failure groups ordered by priority for debugging.
 Total failures: 1032 non-assertion failures, 208 assertion failures
 
 Priority Legend:
-- **HIGH PRIORITY**: NPE/IndexOutOfBounds from NON-restarttest code (likely actual bugs)
+- **HIGH PRIORITY**: NPE/IndexOutOfBounds from NON-restarttest code
 - **MEDIUM PRIORITY**: Other runtime exceptions from non-restarttest code
 - **LOW PRIORITY**: Failures from restarttest modules, timeouts, configuration issues
 
 ---
 
-## HIGH PRIORITY FAILURES (Likely Actual Bugs)
+## HIGH PRIORITY FAILURES
 
-### [ ] Group 3: NullPointerException in UUID.fromString
+### [FP] Group 3: NullPointerException in UUID.fromString
 **Priority: HIGHEST - NPE in core Java/Cassandra code**
 
 **Root Cause:**
@@ -51,7 +51,7 @@ java.lang.NullPointerException: Cannot invoke "String.length()" because "name" i
 
 ---
 
-### [ ] Group 5: NullPointerException in GCInspector
+### [TEST-BUG] Group 5: NullPointerException in GCInspector
 **Priority: HIGH - NPE in Cassandra core monitoring code**
 
 **Root Cause:**
