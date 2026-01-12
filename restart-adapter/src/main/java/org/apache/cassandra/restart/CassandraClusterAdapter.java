@@ -74,22 +74,34 @@ public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
 
     @Override
     public void waitActive(Cluster cluster) throws Exception {
-        // Wait for all running nodes to see the ring as healthy
+        // Count how many nodes are currently running
+        int runningCount = 0;
+        IInvokableInstance firstRunning = null;
         for (int i = 1; i <= cluster.size(); i++) {
             IInvokableInstance node = cluster.get(i);
             if (!node.isShutdown()) {
-                // This node should see all other nodes as Up and Normal
-                ClusterUtils.awaitRingHealthy(node);
-                break;  // Once one node sees ring as healthy, we're good
+                runningCount++;
+                if (firstRunning == null) {
+                    firstRunning = node;
+                }
             }
         }
 
-        // Wait for schema agreement across all running nodes
-        for (int i = 1; i <= cluster.size(); i++) {
-            if (!cluster.get(i).isShutdown()) {
-                ClusterUtils.awaitGossipSchemaMatch(cluster.get(i));
-                break;  // Schema check from one node is sufficient
-            }
+        if (firstRunning == null) {
+            logger.warn("No running nodes in cluster, skipping waitActive");
+            return;
+        }
+
+        // Only wait for ring to be healthy if all nodes are running
+        // Otherwise, some nodes are intentionally down and we can't expect a healthy ring
+        if (runningCount == cluster.size()) {
+            logger.info("All {} nodes are running, waiting for ring to be healthy", runningCount);
+            ClusterUtils.awaitRingHealthy(firstRunning);
+            ClusterUtils.awaitGossipSchemaMatch(firstRunning);
+        } else {
+            logger.info("Only {} of {} nodes are running, skipping ring health check", runningCount, cluster.size());
+            // Just wait a brief moment for the restarted node to stabilize
+            Thread.sleep(2000);
         }
     }
 
@@ -153,14 +165,18 @@ public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
         int nodeNum = instance.config().num();
 
         try {
-            // Step 1: Gracefully shutdown the node
-            // The shutdown(true) method handles flushing, gossip announcements, and clean service shutdown
-            logger.info("Gracefully shutting down node {}", nodeNum);
-            Future<Void> shutdownFuture = instance.shutdown(true);
-            FBUtilities.waitOnFuture(shutdownFuture);
+            // Step 1: Gracefully shutdown the node (if not already shutdown)
+            if (instance.isShutdown()) {
+                logger.info("Node {} is already shut down, skipping shutdown step", nodeNum);
+            } else {
+                // The shutdown(true) method handles flushing, gossip announcements, and clean service shutdown
+                logger.info("Gracefully shutting down node {}", nodeNum);
+                Future<Void> shutdownFuture = instance.shutdown(true);
+                FBUtilities.waitOnFuture(shutdownFuture);
 
-            // Brief pause to allow cluster to detect node is down
-            Thread.sleep(1000);
+                // Brief pause to allow cluster to detect node is down
+                Thread.sleep(1000);
+            }
 
             // Step 2: Restart the node
             logger.info("Starting up node {}", nodeNum);
@@ -185,11 +201,16 @@ public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
         int nodeNum = instance.config().num();
 
         try {
-            // Simulate crash using abrupt stop (blocks all messages, then shuts down)
-            ClusterUtils.stopAbrupt(cluster, instance);
+            // Simulate crash using abrupt stop (if not already shutdown)
+            if (instance.isShutdown()) {
+                logger.info("Node {} is already shut down, skipping crash stop step", nodeNum);
+            } else {
+                // Simulate crash using abrupt stop (blocks all messages, then shuts down)
+                ClusterUtils.stopAbrupt(cluster, instance);
 
-            // Pause to simulate crash detection time
-            Thread.sleep(2000);
+                // Pause to simulate crash detection time
+                Thread.sleep(2000);
+            }
 
             // Restart the node
             instance.startup();
@@ -212,24 +233,29 @@ public class CassandraClusterAdapter implements ClusterAdapter<Cluster> {
         int nodeNum = instance.config().num();
 
         try {
-            // Start shutdown process gracefully
-            Future<Void> shutdownFuture = instance.shutdown(true);
+            // Delayed crash only makes sense if the node is running
+            if (instance.isShutdown()) {
+                logger.info("Node {} is already shut down, skipping delayed crash step", nodeNum);
+            } else {
+                // Start shutdown process gracefully
+                Future<Void> shutdownFuture = instance.shutdown(true);
 
-            // Wait a bit to let some cleanup happen
-            Thread.sleep(500);
+                // Wait a bit to let some cleanup happen
+                Thread.sleep(500);
 
-            // Force immediate shutdown (simulates crash during shutdown)
-            ClusterUtils.stopAbrupt(cluster, instance);
+                // Force immediate shutdown (simulates crash during shutdown)
+                ClusterUtils.stopAbrupt(cluster, instance);
 
-            // Wait for future to complete (it will likely fail or already be done)
-            try {
-                shutdownFuture.get(2, TimeUnit.SECONDS);
-            } catch (Exception e) {
-                // Expected - we interrupted the shutdown
+                // Wait for future to complete (it will likely fail or already be done)
+                try {
+                    shutdownFuture.get(2, TimeUnit.SECONDS);
+                } catch (Exception e) {
+                    // Expected - we interrupted the shutdown
+                }
+
+                // Pause before restart
+                Thread.sleep(2000);
             }
-
-            // Pause before restart
-            Thread.sleep(2000);
 
             // Restart the node
             instance.startup();
