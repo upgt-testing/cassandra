@@ -93,7 +93,7 @@
     <property name="test.driver.read_timeout_ms" value="24000"/>
     <property name="test.jvm.args" value="" />
     <!-- Restart Testing Framework paths - default for Docker, override with -Drestart.framework.dir=... -->
-    <property name="restart.framework.dir" value="/workspace/RestartTestingFramework" />
+    <property name="restart.framework.dir" value="/home/shuai/xlab/restart_testing/RestartTestingFramework" />
     <property name="restart.tracking.agent" value="${restart.framework.dir}/restart-tracking-agent/target/restart-tracking-agent-1.0.0-SNAPSHOT.jar" />
     <property name="testtag.extra" value="" />
     <property name="dist.dir" value="${build.dir}/dist"/>
